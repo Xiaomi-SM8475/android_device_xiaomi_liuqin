@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Whether to intercept inputs on screen off -->
+    <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
+    <integer name="config_doubleTapKeyCode">143</integer>
+
+    <!-- Default settings for gestures:
+             0 - Disabled
+             1 - Wake
+             2 - Pulse
+             3 - Flashlight
+             4 - Airplane
+             5 - Play/Pause
+             6 - Next
+             7 - Previous
+             8 - Camera
+             9 - Dialer -->
+    <integer name="config_doubleTapDefault">1</integer>
+
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/qcom-battery/fastchg_mode</string>
 

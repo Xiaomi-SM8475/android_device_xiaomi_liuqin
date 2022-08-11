@@ -69,6 +69,9 @@ import /system/etc/init/init.factory.rc
 import /vendor/etc/init/init.charge_logger.rc
 import /vendor/etc/init/init.nanoapp.rc
 
+on property:sys.boot_completed=1
+    chmod 0640 /sys/fs/selinux/enforce
+
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
     export MEMTAG_OPTIONS off

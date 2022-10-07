@@ -34,9 +34,6 @@ drm.service.enabled=true
 # Fingerprint
 ro.hardware.fingerprint=fpc
 
-# FM
-vendor.hw.fm.init=0
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 

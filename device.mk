@@ -75,3 +75,9 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Binary
 KERNEL_PREBUILT_DIR := device/xiaomi/liuqin-kernel
+
+# Update engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier

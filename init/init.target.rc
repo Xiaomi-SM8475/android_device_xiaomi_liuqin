@@ -603,6 +603,9 @@ on post-fs-data
     chmod 0662 /dev/miev
     restorecon /dev/miev
 
+    # Create data folder for FPC fingerprint
+    mkdir /data/vendor/fpc 0770 system system
+
 service mi-serial-sh /vendor/bin/init.mi.serial.sh
     class late_start
     user root

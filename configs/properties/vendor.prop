@@ -31,6 +31,9 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+ro.hardware.fingerprint=fpc
+
 # FM
 vendor.hw.fm.init=0
 

@@ -102,6 +102,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!-- fingerprint hal: using remote service instead of Google's default service-->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.fingerprint</name>
         <transport>hwbinder</transport>
@@ -111,12 +112,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
         <fqname>@4.1::IKeymasterDevice/default</fqname>
-        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
+        <!--<fqname>@4.0::IKeymasterDevice/strongbox</fqname>-->
     </hal>
+    <!--
     <hal format="hidl">
        <name>android.hardware.gatekeeper</name>
        <transport>hwbinder</transport>
@@ -127,7 +130,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>default</instance>
        </interface>
     </hal>
+    -->
     <!-- NFC HAL service -->
+    <!--
     <hal format="hidl">
         <name>android.hardware.nfc</name>
         <transport>hwbinder</transport>
@@ -137,6 +142,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
+    <!--
     <hal format="hidl">
         <name>vendor.nxp.hardware.nfc</name>
         <transport>hwbinder</transport>
@@ -146,7 +153,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- secure element -->
+    <!--
     <hal format="hidl">
        <name>android.hardware.secure_element</name>
        <transport>hwbinder</transport>
@@ -158,7 +167,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>SIM2</instance>
        </interface>
     </hal>
+    -->
     <!-- eSEPowerManager -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
@@ -168,6 +179,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- QSEECom HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
@@ -209,6 +221,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!-- IRADIO -->
+    <!--
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -217,7 +230,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
+    -->
     <!-- RADIO CONFIG -->
+    <!--
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
@@ -227,8 +242,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
 
     <!-- RIL AUDIO HAL -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
         <transport>hwbinder</transport>
@@ -239,6 +256,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
+    -->
 
     <!-- dpm QMI hal service -->
     <hal format="hidl">
@@ -252,6 +270,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
 
     <!-- qcrilhook -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
         <transport>hwbinder</transport>
@@ -262,8 +281,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>oemhook1</instance>
         </interface>
     </hal>
+    -->
 
     <!-- RIL UIM REMOTE CLIENT -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <transport>hwbinder</transport>
@@ -274,8 +295,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteClient1</instance>
         </interface>
     </hal>
+    -->
 
     <!-- RIL UIM REMOTE SERVER -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
         <transport>hwbinder</transport>
@@ -286,8 +309,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteServer1</instance>
         </interface>
     </hal>
+    -->
 
     <!-- RIL UIM LPA -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
@@ -298,8 +323,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>UimLpa1</instance>
         </interface>
     </hal>
+    -->
 
     <!-- RIL UIM -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
@@ -310,7 +337,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>Uim1</instance>
         </interface>
     </hal>
+    -->
 
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
@@ -321,8 +350,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
+    -->
 
     <!-- deviceInfo HAL -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
            <transport>hwbinder</transport>
@@ -332,8 +363,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                <instance>deviceinfo</instance>
            </interface>
     </hal>
+    -->
 
    <!-- IMS RTP Service -->
+   <!--
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
@@ -343,7 +376,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>imsrtpservice</instance>
         </interface>
     </hal>
+    -->
     <!-- Hidl service for 5G network apis -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
@@ -354,7 +389,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
+    -->
    <!-- IMS UCE Service -->
+    <!--
    <hal format="hidl">
        <name>com.qualcomm.qti.uceservice</name>
        <transport>hwbinder</transport>
@@ -364,7 +401,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>com.qualcomm.qti.uceservice</instance>
        </interface>
    </hal>
+    -->
    <!-- IMS callinfo Service -->
+    <!--
    <hal format="hidl">
        <name>vendor.qti.ims.callinfo</name>
        <transport>hwbinder</transport>
@@ -374,7 +413,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>default</instance>
        </interface>
    </hal>
+    -->
    <!-- IMS CM Service -->
+    <!--
    <hal format="hidl">
        <name>com.qualcomm.qti.imscmservice</name>
        <transport>hwbinder</transport>
@@ -384,6 +425,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>qti.ims.connectionmanagerservice</instance>
        </interface>
    </hal>
+    -->
+    <!--
    <hal format="hidl">
        <name>vendor.qti.ims.factory</name>
        <transport>hwbinder</transport>
@@ -394,6 +437,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>default</instance>
        </interface>
    </hal>
+    -->
+    <!--
        <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
@@ -403,6 +448,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- Tether Offload -->
     <hal format="hidl">
       <name>android.hardware.tetheroffload.config</name>
@@ -423,6 +469,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <instance>default</instance>
       </interface>
     </hal>
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
         <transport>hwbinder</transport>
@@ -433,6 +480,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
+    -->
     <!-- Data Link Latency -->
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
@@ -443,6 +491,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.data.connection</name>
         <transport>hwbinder</transport>
@@ -453,6 +502,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot2</instance>
         </interface>
     </hal>
+    -->
     <hal format="hidl">
         <name>vendor.qti.hardware.cacert</name>
         <transport>hwbinder</transport>
@@ -483,6 +533,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!-- Secure image data processor HAL Service -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.secureprocessor.device</name>
         <transport>hwbinder</transport>
@@ -492,6 +543,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>qti-tee</instance>
         </interface>
     </hal>
+    -->
     <!-- bluetooth -->
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -540,6 +592,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!--ANT-->
+    <!--
     <hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
@@ -549,6 +602,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!--ANT-->
     <!--TuiComm-->
     <hal format="hidl">
@@ -572,6 +626,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!--  Eid service -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.eid</name>
         <transport>hwbinder</transport>
@@ -581,7 +636,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- Alarm HAL service -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
         <transport>hwbinder</transport>
@@ -591,6 +648,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
 
     <!-- Camera PostProcessing service -->
     <hal format="hidl">
@@ -685,6 +743,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@1.0::IPAL/default</fqname>
     </hal>
     <!-- SPU service-->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.spu</name>
         <transport>hwbinder</transport>
@@ -694,6 +753,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.spu</name>
         <transport>hwbinder</transport>
@@ -703,6 +764,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- QCC HAL Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.qccvndhal</name>

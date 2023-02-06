@@ -1377,6 +1377,14 @@ vendor/firmware/novatek_nt36532_m81_mp_csot.bin
 vendor/firmware/novatek_nt36532_m81_mp_tm.bin
 vendor/firmware/novatek_spi_fw.bin
 
+# Touch (Xiaomi)
+vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+vendor/etc/init.panel_info.sh
+vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
+
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti

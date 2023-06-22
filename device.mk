@@ -21,7 +21,8 @@ $(call inherit-product, vendor/xiaomi/liuqin/liuqin-vendor.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
 # AAPT
 # Device uses high-density artwork where available

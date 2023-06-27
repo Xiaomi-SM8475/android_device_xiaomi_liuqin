@@ -5,4 +5,7 @@
     
     <!-- Enable auto rotation switching by default -->
     <bool name="def_accelerometer_rotation">true</bool>
+    
+    <!-- Set default screen rotation to 90 degrees, 1 refers to value of android.view.Surface.ROTATION_90 -->
+    <integer name="def_user_rotation">1</integer>
 </resources>

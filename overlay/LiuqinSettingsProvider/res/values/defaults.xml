@@ -2,4 +2,7 @@
 <resources>
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">Xiaomi Pad 6 Pro</string>
+    
+    <!-- Enable auto rotation switching by default -->
+    <bool name="def_accelerometer_rotation">true</bool>
 </resources>

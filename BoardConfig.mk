@@ -60,6 +60,10 @@ TARGET_SCREEN_DENSITY := 340
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
+# HIDL
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/configs/vintf/manifest_cape.xml
+
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \

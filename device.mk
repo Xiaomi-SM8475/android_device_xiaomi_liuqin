@@ -169,6 +169,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
+    LiuqinFrameworks \
+    LiuqinSystemUI \
     WifiResTarget \
     WifiResTarget_cape
 

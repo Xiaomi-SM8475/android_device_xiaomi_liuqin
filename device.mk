@@ -71,7 +71,12 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.target.rc \
+    init.mi_thermald.rc \
+    init.batterysecret.rc \
+    init.charge_logger.rc \
+    ueventd.xiaomi.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom

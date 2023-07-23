@@ -9,3 +9,38 @@ prebuilt_etc {
     src: "fstab.qcom",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mi_thermald.rc",
+    src: "init.mi_thermald.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.batterysecret.rc",
+    src: "init.batterysecret.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.charge_logger.rc",
+    src: "init.charge_logger.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.xiaomi.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.xiaomi.rc",
+    device_specific: true,
+}

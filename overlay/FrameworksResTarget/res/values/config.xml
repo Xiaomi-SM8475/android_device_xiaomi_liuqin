@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Linux Foundation
+     SPDX-License-Identifier: BSD-3-Clause
+-->
+<resources>
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm64/boot-framework.oat</item>
+        <item>/system/framework/arm64/boot-QPerformance.oat</item>
+        <item>/system/framework/arm64/boot-UxPerformance.oat</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/oat/arm64/services.odex</item>
+        <item>/system/framework/services.jar</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/system/lib64/libsurfaceflinger.so</item>
+    </string-array>
+
+    <!-- Control whether the always on display mode is available. This should only be enabled on
+         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
+         states. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
+    <bool name="config_telephony5gNonStandalone">true</bool>
+
+    <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
+    <bool name="config_telephony5gStandalone">true</bool>
+
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+         on the headphone/microphone jack. When false use the older uevent framework. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- Default paddings for content around the corners. -->
+    <dimen name="rounded_corner_content_padding">0.0dip</dimen>
+
+    <!-- Rounded corner settings for secondary built-in display -->
+    <dimen name="rounded_corner_radius">20.0dip</dimen>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Idle current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_idle_cur_ma">6</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Operating volatage for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_operating_voltage_mv">3700</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Rx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_rx_cur_ma">28</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Tx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_tx_cur_ma">36</integer>
+
+</resources>

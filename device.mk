@@ -84,6 +84,12 @@ PRODUCT_COPY_FILES += \
 # Kernel Binary
 KERNEL_PREBUILT_DIR := device/xiaomi/liuqin-kernel
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResTarget \
+    WifiResTarget \
+    WifiResTarget_cape
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \

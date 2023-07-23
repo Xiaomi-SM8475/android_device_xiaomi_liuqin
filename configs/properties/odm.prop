@@ -1,0 +1,17 @@
+# Audio
+vendor.audio.hdr.record.enable=false
+
+# Bluetooth
+bluetooth.device.default_name=Xiaomi Pad 6 Pro
+
+# Display
+persist.sys.sf.color_mode=0
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# SPU
+vendor.gatekeeper.disable_spu=true
+
+# USB
+vendor.usb.product_string=Xiaomi Pad 6 Pro

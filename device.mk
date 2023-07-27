@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     LiuqinFrameworks \
+    LiuqinFrameworksAOSPA \
     LiuqinSettings \
     LiuqinSettingsProvider \
     LiuqinSystemUI \

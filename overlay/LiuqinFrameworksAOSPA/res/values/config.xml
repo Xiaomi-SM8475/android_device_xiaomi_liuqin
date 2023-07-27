@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">Xiaomi/liuqin/missi:13/TKQ1.221114.001/V14.0.6.0.TMYCNXM:user/release-keys</string>
+</resources>

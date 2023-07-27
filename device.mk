@@ -171,6 +171,7 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     LiuqinFrameworks \
     LiuqinSystemUI \
+    LiuqinSystemUIAOSPA \
     WifiResTarget \
     WifiResTarget_cape
 

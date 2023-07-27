@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- StatusBar burn-in protection -->
+    <bool name="config_disableStatusBarBurnInProtection">true</bool>
+</resources>

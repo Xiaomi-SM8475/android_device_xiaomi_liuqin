@@ -1024,6 +1024,18 @@ vendor/etc/eva/facedetection/model3.dat
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 
+# Fingerprint
+vendor/bin/hw/mfp-daemon
+vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
+vendor/etc/init/init.mfp-daemon.rc
+vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
+vendor/etc/vintf/manifest/fod.xml
+vendor/lib64/hw/fingerprint.fpc.so
+vendor/lib64/com.fingerprints.extension@3.0.so
+vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
+
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc

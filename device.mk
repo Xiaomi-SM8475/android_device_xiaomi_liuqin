@@ -217,7 +217,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_PACKAGES += \
-    androidx.window.extensions
+    androidx.window.extensions \
+    RemoveTelephonyPackages
 
 # Thermal
 PRODUCT_PACKAGES += \

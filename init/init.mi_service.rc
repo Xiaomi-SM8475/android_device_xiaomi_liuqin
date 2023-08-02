@@ -2,6 +2,13 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+# Charging
+on boot
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/qcom-battery/input_suspend
+
 # Fingerprint
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system

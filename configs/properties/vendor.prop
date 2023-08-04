@@ -1,5 +1,6 @@
 # Audio
 ro.vendor.audio.dolby.dax.support=true
+ro.audio.monitorRotation=true
 
 # Bluetooth
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true

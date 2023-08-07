@@ -527,4 +527,10 @@
     <!-- Allow the gesture to quick tap the power button multiple times to start the emergency sos
          experience while the device is non-interactive. -->
     <bool name="config_emergencyGestureEnabled">false</bool>
+
+    <!-- Whether the geolocation time zone detection feature is enabled. Setting this to false means
+         the feature cannot be used. Setting this to true means system server components can be
+         tested and location time zone detection may be used if other configuration allows (see
+         location time zone provider configuration settings below). -->
+    <bool name="config_enableGeolocationTimeZoneDetection">false</bool>
 </resources>

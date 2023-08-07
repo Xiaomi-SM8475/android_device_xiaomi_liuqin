@@ -523,4 +523,8 @@
 
     <!-- Flag indicating device support for EAP SIM, AKA, AKA' -->
     <bool name="config_eap_sim_based_auth_supported">false</bool>
+
+    <!-- Allow the gesture to quick tap the power button multiple times to start the emergency sos
+         experience while the device is non-interactive. -->
+    <bool name="config_emergencyGestureEnabled">false</bool>
 </resources>

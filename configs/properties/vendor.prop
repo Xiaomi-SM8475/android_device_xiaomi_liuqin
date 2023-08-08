@@ -1,3 +1,6 @@
+# Audio
+ro.vendor.audio.dolby.dax.support=true
+
 # Bluetooth
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2

@@ -224,6 +224,17 @@ vendor/etc/card-defs.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
+# Audio (Dolby Music)
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_with_dolby_cape.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
 # Audio (EAI Models)
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai

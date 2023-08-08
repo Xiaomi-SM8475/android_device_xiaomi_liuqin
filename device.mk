@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     WifiResTarget_cape
 
+# Peripheral Manager
+PRODUCT_PACKAGES += \
+    XiaomiPeripheralManager
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson

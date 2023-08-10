@@ -1,0 +1,1 @@
+keyboard.doNotWakeByDefault = 1

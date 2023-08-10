@@ -157,6 +157,11 @@ PRODUCT_PACKAGES += \
     init.charge_logger.rc \
     ueventd.xiaomi.rc
 
+# Input Device Configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/Vendor_1915_Product_4d81.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_1915_Product_4d81.idc \
+    $(LOCAL_PATH)/configs/idc/Vendor_1915_Product_eaea.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_1915_Product_eaea.idc
+
 # Kernel Binary
 KERNEL_PREBUILT_DIR := device/xiaomi/liuqin-kernel
 

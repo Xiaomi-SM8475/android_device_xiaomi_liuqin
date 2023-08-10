@@ -14,4 +14,14 @@ android_app {
     static_libs: [
         "androidx.core_core",
     ],
+    required: [
+        "xiaomi-pen"
+    ],
+}
+
+cc_binary {
+    name: "xiaomi-pen",
+    srcs: [
+        "xiaomi-pen.cpp",
+    ],
 }

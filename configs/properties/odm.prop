@@ -7,6 +7,12 @@ bluetooth.device.default_name=Xiaomi Pad 6 Pro
 # Display
 persist.sys.sf.color_mode=0
 
+# Display Orientation
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+debug.sf.ignore_hwc_physical_display_orientation=true
+ro.bootanim.set_orientation_4630947141052476290=ORIENTATION_90
+ro.bootanim.set_orientation_4630947200012256898=ORIENTATION_90
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 

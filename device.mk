@@ -189,6 +189,7 @@ PRODUCT_PACKAGES += \
     LiuqinLauncher3 \
     LiuqinSettings \
     LiuqinSettingsProvider \
+    LiuqinSetupWizardAOSPA \
     LiuqinSystemUI \
     LiuqinSystemUIAOSPA \
     WifiResTarget \

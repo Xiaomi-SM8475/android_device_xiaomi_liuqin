@@ -51,6 +51,3 @@ ro.mediaserver.64b.enable=true
 
 # SoC
 ro.soc.manufacturer=QTI
-
-# Touch
-ro.vendor.touchfeature.type=43

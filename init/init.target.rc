@@ -283,10 +283,6 @@ on boot
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufsfbs/fbs_support
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufsfbs/fbs_wholefile_enable
 
-    # Set xiaomi touch permissions
-    chown system system /dev/xiaomi-touch
-    chmod 0664 /dev/xiaomi-touch
-
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 

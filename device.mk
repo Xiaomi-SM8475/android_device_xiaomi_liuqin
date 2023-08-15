@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.mi_thermald.rc \
     init.batterysecret.rc \
-    init.charge_logger.rc \
     ueventd.xiaomi.rc
 
 # Input Device Configuration

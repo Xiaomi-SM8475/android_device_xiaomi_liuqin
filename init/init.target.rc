@@ -65,9 +65,6 @@
 import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
-import /system/etc/init/init.factory.rc
-import /vendor/etc/init/init.charge_logger.rc
-import /vendor/etc/init/init.nanoapp.rc
 
 on property:sys.boot_completed=1
     chmod 0640 /sys/fs/selinux/enforce
@@ -610,15 +607,6 @@ on post-fs-data
     # Create data folder for FPC fingerprint
     mkdir /data/vendor/fpc 0770 system system
 
-service mi-serial-sh /vendor/bin/init.mi.serial.sh
-    class late_start
-    user root
-    group root system radio
-    disabled
-    oneshot
-
-on post-fs && property:ro.product.device=liuqin
-    start mi-serial-sh
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.sno=*
     setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.psno=*

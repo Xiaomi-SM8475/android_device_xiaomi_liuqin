@@ -32,13 +32,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.charge_logger.rc",
-    src: "init.charge_logger.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "ueventd.xiaomi.rc",
     filename: "ueventd.rc",
     src: "ueventd.xiaomi.rc",

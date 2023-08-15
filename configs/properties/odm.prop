@@ -6,6 +6,7 @@ bluetooth.device.default_name=Xiaomi Pad 6 Pro
 
 # Display
 persist.sys.sf.color_mode=0
+vendor.display.enable_async_vds_creation=0
 
 # Display Orientation
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0

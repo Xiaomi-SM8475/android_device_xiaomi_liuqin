@@ -13,16 +13,6 @@ ro.vendor.bluetooth.csip_qti=true
 camera.disable_zsl_mode=true
 ro.camera.enableCamera1MaxZsl=1
 
-# Display
-ro.vendor.display.ai_disp.enable=true
-ro.vendor.display.mi_calib.enable=true
-ro.vendor.display.nature_mode.enable=true
-ro.vendor.displayfeature.dump=true
-ro.vendor.histogram.enable=true
-ro.vendor.localhbm.enable=false
-ro.vendor.sre.enable=true
-ro.vendor.xiaomi.bl.poll=true
-
 # DPM
 persist.vendor.dpm.vndr.feature=1
 persist.vendor.dpm.vndr.halservice.enable=1

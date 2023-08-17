@@ -872,9 +872,7 @@ vendor/lib64/libhdrdynamicootf.so
 # Display (HWC)
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libdigital-dimming.so
-vendor/lib64/libmi-stc-HW-modulate.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so

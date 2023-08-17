@@ -1062,6 +1062,9 @@ vendor/lib64/libApeSwDec.so
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libFlacSwDec.so
 
+# Perf
+vendor/etc/perf/perfboostsconfig.xml
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/lib64/libperipheral_client.so

@@ -1012,6 +1012,10 @@ vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/media_codecs_with_dolby_cape.xml
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib/libdeccfg.so
+vendor/lib/libstagefright_soft_ac4dec.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/c2.dolby.avc.enc.so
 vendor/lib64/c2.dolby.client.so
 vendor/lib64/c2.dolby.decoder.secure.so

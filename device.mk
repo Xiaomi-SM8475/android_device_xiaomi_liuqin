@@ -176,6 +176,11 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor
 
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor \
+    libcodec2_soft_common.vendor
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-V1-ndk_platform.vendor

@@ -34,6 +34,7 @@ persist.sys.fuse.passthrough.enable=true
 ro.incremental.enable=yes
 
 # Media
+debug.stagefright.c2inputsurface=-1
 ro.mediaserver.64b.enable=true
 
 # SoC

@@ -151,7 +151,6 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libcrussp.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
@@ -224,17 +223,6 @@ vendor/etc/card-defs.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
-# Audio (Dolby Music)
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/etc/dolby/dax-default.xml
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_with_dolby_cape.xml
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-
 # Audio (EAI Models)
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
@@ -268,14 +256,11 @@ vendor/lib64/soundfx/libdownmix.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
 vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libldnhncr.so
 vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libreverbwrapper.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/soundfx/libvisualizer.so
 
 # Bluetooth
@@ -1016,6 +1001,33 @@ vendor/etc/media_codecs_system_default.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
+
+# Media (Dolby)
+vendor/bin/hw/dolbycodec2
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/dolby_vision.cfg
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_with_dolby_cape.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib64/c2.dolby.avc.enc.so
+vendor/lib64/c2.dolby.client.so
+vendor/lib64/c2.dolby.decoder.secure.so
+vendor/lib64/c2.dolby.decoder.so
+vendor/lib64/c2.dolby.egl.so
+vendor/lib64/c2.dolby.hevc.enc.so
+vendor/lib64/c2.dolby.store.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyvision.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Memory
 vendor/lib64/libvmmem.so

@@ -24,4 +24,7 @@
 
     <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Xiaomi/liuqin/missi:13/TKQ1.221114.001/V14.0.6.0.TMYCNXM:user/release-keys</string>
+
+    <!-- Device model (Build.MODEL) to spoof for netflix -->
+    <string name="config_netflixSpoofModel" translatable="false">23043RP34G</string>
 </resources>

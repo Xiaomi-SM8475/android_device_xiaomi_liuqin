@@ -946,6 +946,11 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # HDCP
 vendor/lib64/libmm-hdcpmgr.so
 
+# HubUI - from Google Pixel Tablet (TQ3A.230605.009.A1)
+product/etc/appcompat/compat_framework_overrides.xml|3170cd414d4d6d3a4a9ad518c5f9137afb3da453
+product/etc/permissions/com.google.assistant.hubui.xml|954bd557c143ce8840386e849102aca834386ceb
+product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED|4a768228115d97e6b23c7927619bf1b959c74b96
+
 # Identity
 vendor/bin/hw/android.hardware.identity-service-qti
 vendor/etc/init/android.hardware.identity-service-qti.rc

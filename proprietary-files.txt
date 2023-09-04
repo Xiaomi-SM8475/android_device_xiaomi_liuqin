@@ -956,16 +956,6 @@ vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolby_visio
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/dolby_vision.cfg
-vendor/lib/c2.dolby.avc.dec.so
-vendor/lib/c2.dolby.avc.sec.dec.so
-vendor/lib/c2.dolby.client.so
-vendor/lib/c2.dolby.egl.so
-vendor/lib/c2.dolby.hevc.dec.so
-vendor/lib/c2.dolby.hevc.enc.so
-vendor/lib/c2.dolby.hevc.sec.dec.so
-vendor/lib/c2.dolby.store.so
-vendor/lib/libdolbyottcameracontrol.so
-vendor/lib/libdolbyvision.so
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so

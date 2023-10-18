@@ -65,7 +65,7 @@ function blob_fixup() {
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
         vendor/lib64/libQnnGpu.so)
-            "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784d/bin/llvm-strip "${2}"
+            "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip "${2}"
             ;;
     esac
 }

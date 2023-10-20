@@ -13,6 +13,7 @@ android_app {
     system_ext_specific: true,
     static_libs: [
         "androidx.core_core",
+        "SettingsLib",
         "vendor.xiaomi.hw.touchfeature-V1.0-java",
     ],
 }

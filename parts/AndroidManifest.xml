@@ -30,6 +30,25 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".peripheral.StylusSettingsActivity"
+            android:label="@string/stylus_title"
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_stylus" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-253" />
+        </activity>
+
         <service
             android:name=".peripheral.KeyboardUtilsService"
             android:exported="true">

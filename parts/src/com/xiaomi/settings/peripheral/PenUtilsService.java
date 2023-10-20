@@ -9,11 +9,15 @@ package com.xiaomi.settings.peripheral;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.hardware.input.InputManager;
 import android.hardware.input.InputManager.InputDeviceListener;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.InputDevice;
+
+import androidx.preference.PreferenceManager;
 
 import com.xiaomi.settings.touch.TfWrapper;
 
@@ -22,9 +26,13 @@ public class PenUtilsService extends Service {
     private static final String TAG = "XiaomiPartsPenUtilsService";
     private static final boolean DEBUG = true;
 
+    private static final String STYLUS_KEY = "stylus_switch_key";
+
     private static boolean mIsPenModeEnabled;
+    private static boolean mIsPenModeForced;
 
     private static InputManager mInputManager;
+    private static SharedPreferences mSharedPrefs;
 
     @Override
     public void onCreate() {
@@ -32,6 +40,9 @@ public class PenUtilsService extends Service {
         if (DEBUG) Log.d(TAG, "Creating service");
         mInputManager = (InputManager) getSystemService(Context.INPUT_SERVICE);
         mInputManager.registerInputDeviceListener(mInputDeviceListener, null);
+        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mSharedPrefs.registerOnSharedPreferenceChangeListener(mSharedPrefsListener);
+        mIsPenModeForced = mSharedPrefs.getBoolean(STYLUS_KEY, false);
     }
 
     @Override
@@ -58,6 +69,14 @@ public class PenUtilsService extends Service {
     }
 
     private void refreshPenMode() {
+        if (mIsPenModeForced) {
+            if (DEBUG) Log.d(TAG, "refreshPenMode: Pen Mode forced");
+            if (!mIsPenModeEnabled) {
+                mIsPenModeEnabled = true;
+                updatePenMode();
+            }
+            return;
+        }
         for (int id : mInputManager.getInputDeviceIds()) {
             if (isDeviceXiaomiPen(id)) {
                 if (DEBUG) Log.d(TAG, "refreshPenMode: Found Xiaomi Pen");
@@ -81,18 +100,27 @@ public class PenUtilsService extends Service {
     }
 
     private InputDeviceListener mInputDeviceListener = new InputDeviceListener() {
-            @Override
-            public void onInputDeviceAdded(int id) {
+        @Override
+        public void onInputDeviceAdded(int id) {
+            refreshPenMode();
+        }
+        @Override
+        public void onInputDeviceRemoved(int id) {
+            refreshPenMode();
+        }
+        @Override
+        public void onInputDeviceChanged(int id) {
+            refreshPenMode();
+        }
+    };
+    
+    private OnSharedPreferenceChangeListener mSharedPrefsListener = new OnSharedPreferenceChangeListener() {
+        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+            if (key.equals(STYLUS_KEY)) {
+                mIsPenModeForced = prefs.getBoolean(STYLUS_KEY, false);
                 refreshPenMode();
             }
-            @Override
-            public void onInputDeviceRemoved(int id) {
-                refreshPenMode();
-            }
-            @Override
-            public void onInputDeviceChanged(int id) {
-                refreshPenMode();
-            }
-        };
+        }
+    };
 
 }

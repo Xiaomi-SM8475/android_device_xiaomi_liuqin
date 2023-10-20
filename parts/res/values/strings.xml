@@ -7,4 +7,9 @@
 <resources>
     <!-- App Name -->
     <string name="app_name">Xiaomi Parts</string>
+
+    <!-- Xiaomi Stylus -->
+    <string name="stylus_title">Stylus</string>
+    <string name="stylus_switch_title">Force recognize stylus</string>
+    <string name="stylus_switch_summary">Enable this settings to allow using third party styluses</string>
 </resources>

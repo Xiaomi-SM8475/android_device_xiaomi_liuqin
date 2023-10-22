@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "WifiResTarget_cape",
-    vendor: true,
+    product_specific: true,
 }

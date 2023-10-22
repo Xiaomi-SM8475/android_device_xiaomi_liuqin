@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "LiuqinFrameworks",
-    device_specific: true,
+    product_specific: true,
 }

@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "LiuqinLauncher3",
-    device_specific: true,
+    product_specific: true,
 }

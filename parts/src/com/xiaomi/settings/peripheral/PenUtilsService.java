@@ -54,7 +54,7 @@ public class PenUtilsService extends Service {
 
     private void updatePenMode() {
         Log.d(TAG, "refreshPenMode: " + mIsPenModeEnabled);
-        TfWrapper.setTouchFeature(new TfWrapper.TfParams(20, mIsPenModeEnabled ? 18 : 0));
+        TfWrapper.setTouchFeature(new TfWrapper.TfParams(20, mIsPenModeEnabled ? 18 : 2));
     }
 
     private void refreshPenMode() {

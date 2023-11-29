@@ -64,6 +64,9 @@ function blob_fixup() {
         vendor/etc/camera/pureShot_parameter.xml | vendor/etc/camera/pureView_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
+        vendor/lib64/libdlbdsservice.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v32.so" "${2}"
+            ;;
         vendor/lib64/libQnnGpu.so)
             "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip "${2}"
             ;;

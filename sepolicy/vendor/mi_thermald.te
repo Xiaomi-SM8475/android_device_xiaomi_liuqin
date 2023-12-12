@@ -1,2 +1,0 @@
-type mi_thermald, domain;
-type mi_thermald_exec, exec_type, vendor_file_type, file_type;

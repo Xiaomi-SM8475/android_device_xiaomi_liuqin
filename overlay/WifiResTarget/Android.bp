@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiResTarget",
+    name: "LiuqinWifiResTarget",
     product_specific: true,
 }

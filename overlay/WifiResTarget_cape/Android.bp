@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiResTarget_cape",
+    name: "LiuqinWifiResTarget_cape",
     product_specific: true,
 }

@@ -1,0 +1,7 @@
+# Copyright (C) 2023 Paranoid Android
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Fingerprint
+on post-fs-data
+    mkdir /data/vendor/fpc 0770 system system

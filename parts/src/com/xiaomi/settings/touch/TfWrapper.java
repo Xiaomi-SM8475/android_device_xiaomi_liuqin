@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package co.aospa.xiaomiperipheralmanager;
+package com.xiaomi.settings.touch;
 
 import android.os.IHwBinder.DeathRecipient;
 import android.util.Log;

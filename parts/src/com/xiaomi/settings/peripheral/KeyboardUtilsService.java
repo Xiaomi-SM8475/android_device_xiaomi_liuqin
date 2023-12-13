@@ -4,25 +4,48 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package co.aospa.xiaomiperipheralmanager;
+package com.xiaomi.settings.peripheral;
 
+import android.app.Service;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.input.InputManager;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.InputDevice;
 
-public class KeyboardUtils {
+public class KeyboardUtilsService extends Service {
 
-    private static final String TAG = "XiaomiPeripheralManagerKeyboardUtils";
+    private static final String TAG = "XiaomiPartsKeyboardUtilsService";
     private static final boolean DEBUG = true;
 
     private static InputManager mInputManager;
 
-    public static void setup(Context context) {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        if (DEBUG) Log.d(TAG, "Creating service");
         if (mInputManager == null) {
-            mInputManager = (InputManager) context.getSystemService(Context.INPUT_SERVICE);
+            mInputManager = (InputManager) getSystemService(Context.INPUT_SERVICE);
         }
         setKeyboardEnabled(false);
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (DEBUG) Log.d(TAG, "onStartCommand");
+        return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        if (DEBUG) Log.d(TAG, "onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 
     public static void setKeyboardEnabled(boolean enabled) {
@@ -45,4 +68,5 @@ public class KeyboardUtils {
         InputDevice inputDevice = mInputManager.getInputDevice(id);
         return inputDevice.getVendorId() == 5593 && inputDevice.getProductId() == 163;
     }
+
 }

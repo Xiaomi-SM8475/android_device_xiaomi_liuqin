@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.aospa.xiaomiperipheralmanager"
+    package="com.xiaomi.settings"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
@@ -24,11 +24,21 @@
             android:name=".BootCompletedReceiver"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-            <intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".peripheral.KeyboardUtilsService"
+            android:exported="true">
+        </service>
+
+        <service
+            android:name=".peripheral.PenUtilsService"
+            android:exported="true">
+        </service>
 
     </application>
 </manifest>

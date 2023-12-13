@@ -1404,6 +1404,7 @@ vendor/lib64/libFileMux_proprietary.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
+vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libmiracast.so
 vendor/lib64/libmmosal_vendor.so

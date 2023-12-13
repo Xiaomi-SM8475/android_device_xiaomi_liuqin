@@ -69,9 +69,6 @@ import /vendor/etc/init/hw/init.batterysecret.rc
 on property:sys.boot_completed=1
     chmod 0640 /sys/fs/selinux/enforce
 
-on property:persist.sys.parts.pen=*
-    exec /system/bin/xiaomi-pen ${persist.sys.parts.pen}
-
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
     export MEMTAG_OPTIONS off

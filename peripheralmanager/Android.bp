@@ -13,15 +13,6 @@ android_app {
     system_ext_specific: true,
     static_libs: [
         "androidx.core_core",
-    ],
-    required: [
-        "xiaomi-pen"
-    ],
-}
-
-cc_binary {
-    name: "xiaomi-pen",
-    srcs: [
-        "xiaomi-pen.cpp",
+        "vendor.xiaomi.hw.touchfeature-V1.0-java",
     ],
 }

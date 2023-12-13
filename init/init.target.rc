@@ -64,6 +64,7 @@
 
 import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
+import /vendor/etc/init/hw/init.mi_service.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
 
 on property:sys.boot_completed=1
@@ -603,9 +604,6 @@ on post-fs-data
 
     chmod 0662 /dev/miev
     restorecon /dev/miev
-
-    # Create data folder for FPC fingerprint
-    mkdir /data/vendor/fpc 0770 system system
 
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.sno=*
     setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}

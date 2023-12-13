@@ -158,8 +158,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
-    init.mi_thermald.rc \
-    init.batterysecret.rc \
+    init.mi_service.rc \
     ueventd.xiaomi.rc
 
 # Input Device Configuration

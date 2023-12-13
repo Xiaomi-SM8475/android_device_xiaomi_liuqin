@@ -202,8 +202,8 @@ PRODUCT_PACKAGES += \
     LiuqinSetupWizardAOSPA \
     LiuqinSystemUI \
     LiuqinSystemUIAOSPA \
-    WifiResTarget \
-    WifiResTarget_cape
+    LiuqinWifiResTarget \
+    LiuqinWifiResTarget_cape
 
 # Parts
 PRODUCT_PACKAGES += \

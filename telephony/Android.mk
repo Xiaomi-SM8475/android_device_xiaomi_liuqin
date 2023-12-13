@@ -13,6 +13,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
    CarrierServices \
    com.google.android.dialer.support \
+   EmergencyInfoGms \
    Dialer \
    GoogleDialer \
    Messages \

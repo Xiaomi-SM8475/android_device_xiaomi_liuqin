@@ -87,6 +87,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_effects.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
@@ -118,6 +124,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630947141052476290.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947141052476290.xml \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630947200012256898.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947200012256898.xml
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -191,7 +200,9 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
-    libcodec2_soft_common.vendor
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -210,10 +221,6 @@ PRODUCT_PACKAGES += \
     LiuqinSystemUIAOSPA \
     LiuqinWifiResTarget \
     LiuqinWifiResTarget_cape
-
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Perf
 PRODUCT_COPY_FILES += \
@@ -275,7 +282,8 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v32.so
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v32.so \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # WiFi
 PRODUCT_COPY_FILES += \

@@ -25,5 +25,6 @@
         <name>android.hardware.media.c2</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IComponentStore/dolby</fqname>
+        <fqname>@1.0::IComponentStore/default1</fqname>
     </hal>
 </manifest>

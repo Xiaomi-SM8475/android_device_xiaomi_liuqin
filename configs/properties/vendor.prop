@@ -36,6 +36,7 @@ ro.incremental.enable=yes
 # Media
 debug.stagefright.c2inputsurface=-1
 ro.mediaserver.64b.enable=true
+vendor.media.omx=0
 
 # SoC
 ro.soc.manufacturer=QTI

@@ -67,6 +67,9 @@ function blob_fixup() {
         vendor/lib64/libdlbdsservice.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v32.so" "${2}"
             ;;
+        vendor/lib64/soundfx/libhwdap.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
         vendor/lib64/libQnnGpu.so)
             "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip "${2}"
             ;;

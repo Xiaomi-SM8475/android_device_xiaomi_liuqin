@@ -55,6 +55,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!--
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
@@ -69,6 +70,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- DSP Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.dsp</name>

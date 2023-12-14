@@ -1,4 +1,4 @@
-# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V14.0.6.0.TMYCNXM package, unless pinned
+# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V14.0.9.0.TMYCNXM package, unless pinned
 
 # Adreno Firmware - from Poco F5 (V14.0.6.0.TMRMIXM)
 vendor/firmware/a730_sqe.fw|4c940da4240a8f7ec3bc86d851ddd2985fbdcc88

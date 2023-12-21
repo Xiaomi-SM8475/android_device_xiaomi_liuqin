@@ -1,4 +1,4 @@
-# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V14.0.9.0.TMYCNXM package, unless pinned
+# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V816.0.2.0.UMYCNXM package, unless pinned
 
 # Adreno Firmware - from Poco F5 (V14.0.6.0.TMRMIXM)
 vendor/firmware/a730_sqe.fw|4c940da4240a8f7ec3bc86d851ddd2985fbdcc88
@@ -68,7 +68,6 @@ vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libMIAIHDR_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libQnnHtpAltPrepV69Skel.so
-vendor/lib/rfsa/adsp/libQnnHtpV69Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV68Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV69Skel.so
 vendor/lib/rfsa/adsp/libVppFrcQnnHtp.so
@@ -80,6 +79,7 @@ vendor/lib/rfsa/adsp/libcvpdsp_2_1.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
+vendor/lib/rfsa/adsp/libevadsp_3_0.so
 vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
@@ -94,7 +94,6 @@ vendor/lib/rfsa/adsp/libmobilenet_dsp_frc.so
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks.so
 vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
@@ -323,8 +322,10 @@ vendor/etc/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png
 vendor/etc/camera/129_Vivid.png
 vendor/etc/camera/130_Natural.png
-vendor/etc/camera/131_Monochrom.png
-vendor/etc/camera/132_MonochromHighContrast.png
+vendor/etc/camera/131_Monochrome.png
+vendor/etc/camera/132_MonochromeHighContrast.png
+vendor/etc/camera/133_MonochromeBrown.png
+vendor/etc/camera/134_MonochromeBlue.png
 vendor/etc/camera/CFR_para_MACRO_V01.bin
 vendor/etc/camera/CFR_para_MACRO_V01_SN.bin
 vendor/etc/camera/CFR_para_UW_V01.bin
@@ -869,6 +870,7 @@ vendor/etc/display/DPU820.xml|35afcb7834d13eacc8f14d2ff4ac5132bb01a563
 vendor/etc/display/DPU8__.xml|2360038d60e9dff36d7f14a59a25da74bac1abe4
 vendor/etc/display/advanced_sf_offsets.xml|29b6b0554d6393a8be90f52fce010946abd38d52
 vendor/etc/display/thermallevel_to_fps.xml|bc38035c8f41308fc25cc30969fbbf16ab86c43f
+vendor/lib64/libdisplayconfig.qti.so|1e911a06c7094a77d8218db528b82eefbfd514b7
 vendor/lib64/libdisplayskuutils.so|d6aa7954aa36c8ae8f9e7eb90102781d63a08de9
 vendor/lib64/libmemutils.so|8102e47e3d1c521bfcb1201477006cd5bc339379
 vendor/lib64/libqrtrclient.so|251146748531781010bcc33110f6afaa340f6a33
@@ -925,8 +927,8 @@ vendor/lib64/libbase64.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
-# DRM (Widevine L1)
-vendor/lib64/liboemcrypto.so
+# DRM (Widevine L1) - from Xiaomi Pad 6 Pro V14.0.9.0.TMYCNXM
+vendor/lib64/liboemcrypto.so|1b1cf9c39a4960be794da3443438f2b11203a3fa
 
 # EVA
 vendor/etc/eva/facedetection/model3.dat
@@ -940,6 +942,11 @@ vendor/lib64/hw/fingerprint.fpc.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
+# GNSS
+vendor/lib64/libgps.utils.so
+vendor/lib64/libloc_base_util.so
+vendor/lib64/libloc_mq_client.so
 
 # HDCP
 vendor/lib64/libmm-hdcpmgr.so
@@ -989,19 +996,30 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
 
 # Media (Dolby)
-vendor/bin/hw/dolbycodec2
+vendor/bin/hw/dolbycodec2|ee60093dc4873e3b7d3a8250283c9a9502b0f4cc
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
-vendor/etc/dolby_vision.cfg
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/lib64/c2.dolby.avc.enc.so
+vendor/etc/dolby_vision.cfg
+vendor/lib/c2.dolby.avc.dec.so
+vendor/lib/c2.dolby.avc.sec.dec.so
+vendor/lib/c2.dolby.client.so
+vendor/lib/c2.dolby.egl.so
+vendor/lib/c2.dolby.hevc.dec.so
+vendor/lib/c2.dolby.hevc.enc.so
+vendor/lib/c2.dolby.hevc.sec.dec.so
+vendor/lib/c2.dolby.store.so
+vendor/lib/libdolbyottcameracontrol.so
+vendor/lib/libdolbyvision.so
+vendor/lib64/c2.dolby.avc.dec.so
+vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
-vendor/lib64/c2.dolby.decoder.secure.so
-vendor/lib64/c2.dolby.decoder.so
 vendor/lib64/c2.dolby.egl.so
+vendor/lib64/c2.dolby.hevc.dec.so
 vendor/lib64/c2.dolby.hevc.enc.so
+vendor/lib64/c2.dolby.hevc.sec.dec.so
 vendor/lib64/c2.dolby.store.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdolbyottcameracontrol.so
@@ -1012,6 +1030,11 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 # Media (Dolby Audio) - from Xiaomi 13 Pro (V14.0.6.0.UMBMIXM)
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service|4a88666d7f072ce6ba4147198fe3aee1eebf1481
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
+vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
+vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b
+vendor/lib64/soundfx/libswgamedap.so|517df6aa1b233ad943632b072c5c63ea7925ca54
+vendor/lib64/soundfx/libswspatializer.so|97203e8c0b44199af856f5564a4079aef3aa36d0
+vendor/lib64/soundfx/libswvqe.so|901794e42022ffc258b18b0c1226a179f904d0bf
 vendor/lib64/libcodec2_soft_ac4dec.so|3d4eeff8683054781b8c2f8c41dc3940fa17ff94
 vendor/lib64/libcodec2_soft_ddpdec.so|50a9d5bd899bd4dba9af3bd7ef04f42a813be38a
 vendor/lib64/libcodec2_store_dolby.so|3749d05dc119cd7c06d536cafbe7a79101386bec
@@ -1019,11 +1042,6 @@ vendor/lib64/libdapparamstorage.so|b0e7759c09b120e5aefbe9a2850b61db87ec7c80
 vendor/lib64/libdeccfg.so|53080fed62ca29c2609070c0850a1e711e5c89ac
 vendor/lib64/libdlbpreg.so|49d9fe0ff22a8a7feaca5d5996e19a112517533e
 vendor/lib64/libspatializerparamstorage.so|ae237b5d7d9fda0fccbc168dc01cf868e3f336c4
-vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
-vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b
-vendor/lib64/soundfx/libswgamedap.so|517df6aa1b233ad943632b072c5c63ea7925ca54
-vendor/lib64/soundfx/libswspatializer.so|97203e8c0b44199af856f5564a4079aef3aa36d0
-vendor/lib64/soundfx/libswvqe.so|901794e42022ffc258b18b0c1226a179f904d0bf
 
 # Memory
 vendor/lib64/libvmmem.so
@@ -1038,28 +1056,11 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 
-# Mstat
-vendor/bin/mstatdaemon
-vendor/etc/init/mstatdaemon.rc
-vendor/lib64/vendor.qti.mstatservice@1.0-impl.so
-vendor/lib64/vendor.qti.mstatservice@1.0.so
-
 # Native public libraries
 vendor/etc/public.libraries.txt
 
 # Neural Networks
-vendor/bin/hw/android.hardware.neuralnetworks-shim-service-qti
-vendor/etc/init/android.hardware.neuralnetworks-shim-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-qti.xml
-vendor/lib64/libQnnGpu.so
-vendor/lib64/libQnnHtp.so
 vendor/lib64/libQnnHtpAltPrepV69Stub.so
-vendor/lib64/libQnnHtpPrepare.so
-vendor/lib64/libQnnHtpV69Stub.so
-vendor/lib64/libUnnhalAccCommon.so
-vendor/lib64/libUnnhalAccGpu.so
-vendor/lib64/libUnnhalAccHtp.so
-vendor/lib64/libnnapi_sl_driver.so
 
 # OMX
 vendor/lib64/libAlacSwDec.so
@@ -1164,10 +1165,8 @@ vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libelliptic_engine.so
 vendor/lib64/libelliptic_serializer.so
-vendor/lib64/libnanopb.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
-vendor/lib64/libsns_api.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_direct_channel_stub.so
 vendor/lib64/libsns_registry_skel.so
@@ -1260,7 +1259,6 @@ vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libvideoutils.so
@@ -1324,9 +1322,9 @@ vendor/firmware/novatek_spi_fw.bin
 
 # Touchfeature
 vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
-vendor/etc/init.panel_info.sh
 vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+vendor/etc/init.panel_info.sh
 vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
 
@@ -1417,6 +1415,7 @@ vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libmiracast.so
 vendor/lib64/libmmosal_vendor.so

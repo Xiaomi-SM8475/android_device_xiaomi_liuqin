@@ -996,7 +996,7 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
 
 # Media (Dolby)
-vendor/bin/hw/dolbycodec2|ee60093dc4873e3b7d3a8250283c9a9502b0f4cc
+vendor/bin/hw/dolbycodec2|cd809c9d2615351c4c63ebb29231a0e067619267
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc
@@ -1028,7 +1028,7 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Media (Dolby Audio) - from Xiaomi 13 Pro (V14.0.6.0.UMBMIXM)
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service|4a88666d7f072ce6ba4147198fe3aee1eebf1481
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|a2ff305b8a89a5b67d7a010a3ac4908c1150fd45
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
 vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
 vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b

@@ -33,6 +33,7 @@
                 <Limit name="sample-rate" ranges="48000" />
                 <Limit name="bitrate" range="32000-6144000" />
             </Type>
+            <Attribute name="software-codec" />
         </MediaCodec>
         <!-- DOLBY_UDC END -->
         <!-- DOLBY_AC4 -->
@@ -42,6 +43,7 @@
             <Limit name="channel-count" max="16" />
             <Limit name="sample-rate" ranges="48000" />
             <Limit name="bitrate" range="16000-2688000" />
+            <Attribute name="software-codec" />
         </MediaCodec>
         -->
         <!-- DOLBY_AC4 END -->

@@ -999,9 +999,9 @@ vendor/etc/media_profiles_cape.xml
 vendor/bin/hw/dolbycodec2|cd809c9d2615351c4c63ebb29231a0e067619267
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolbycodec2.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolby_vision_codec2.rc
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/dolby_vision.cfg
 vendor/lib/c2.dolby.avc.dec.so
 vendor/lib/c2.dolby.avc.sec.dec.so
@@ -1027,21 +1027,19 @@ vendor/lib64/libdolbyvision.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
-# Media (Dolby Audio) - from Xiaomi 13 Pro (V14.0.6.0.UMBMIXM)
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service|a2ff305b8a89a5b67d7a010a3ac4908c1150fd45
+# Media (Dolby Audio) - from Xiaomi Pad 6 Max (V816.0.2.0.UMHCNXM)
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|b63e07fc6d6f8c9c7b3265aed79ab20dc5b19bac
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
-vendor/lib64/soundfx/libdlbvol.so|8ef979e2d0768fd1f1cc1b88b2c6c5e03d57600c
-vendor/lib64/soundfx/libhwdap.so|3e7f703301dd7cddc8cbb72753b0dce3d124389b
-vendor/lib64/soundfx/libswgamedap.so|517df6aa1b233ad943632b072c5c63ea7925ca54
-vendor/lib64/soundfx/libswspatializer.so|97203e8c0b44199af856f5564a4079aef3aa36d0
-vendor/lib64/soundfx/libswvqe.so|901794e42022ffc258b18b0c1226a179f904d0bf
-vendor/lib64/libcodec2_soft_ac4dec.so|3d4eeff8683054781b8c2f8c41dc3940fa17ff94
-vendor/lib64/libcodec2_soft_ddpdec.so|50a9d5bd899bd4dba9af3bd7ef04f42a813be38a
-vendor/lib64/libcodec2_store_dolby.so|3749d05dc119cd7c06d536cafbe7a79101386bec
-vendor/lib64/libdapparamstorage.so|b0e7759c09b120e5aefbe9a2850b61db87ec7c80
-vendor/lib64/libdeccfg.so|53080fed62ca29c2609070c0850a1e711e5c89ac
-vendor/lib64/libdlbpreg.so|49d9fe0ff22a8a7feaca5d5996e19a112517533e
-vendor/lib64/libspatializerparamstorage.so|ae237b5d7d9fda0fccbc168dc01cf868e3f336c4
+vendor/lib64/soundfx/libdlbvol.so|1ebd52ecc1a42e1ec0eb785e541b08d191bf9924
+vendor/lib64/soundfx/libhwdap.so|1058720b5930196370e1e792a14e60e16c9a46e1
+vendor/lib64/soundfx/libswgamedap.so|cac12e23c860270775986d56c8f9b8f58ac07be3
+vendor/lib64/soundfx/libswvqe.so|bcfc527b34066600c4b747cced45ab8012e4c1a5
+vendor/lib64/libcodec2_soft_ac4dec.so|3f7da3e48b391f94e3e4aedbbea514eb5f4283ed
+vendor/lib64/libcodec2_soft_ddpdec.so|55275a7abcfde2d3f44fc48f9dd7a976fb98ebc1
+vendor/lib64/libcodec2_store_dolby.so|d0a85979f9c622cc5ad4071635271fe51c9ecb55
+vendor/lib64/libdapparamstorage.so|6dd6cf3bd92710cdba1cb981b52e64dca2407bd1
+vendor/lib64/libdeccfg.so|8ef3036d0b7a5f2caae277e21b5cf5174b2f085f
+vendor/lib64/libdlbpreg.so|e1588ec15d1b328c037ffd2f80c426dcd90d6467
 
 # Memory
 vendor/lib64/libvmmem.so

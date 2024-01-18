@@ -113,11 +113,6 @@ on fs
     mkdir /mnt/vendor/persist/qca6490/ 0700 system system
     chmod 0666 /dev/xlog
 
-on fs && property:ro.boot.product.vendor.sku=taro
-    mkdir /mnt/vendor/spunvm 0660 system system
-    wait /dev/block/bootdevice/by-name/spunvm
-    mount vfat /dev/block/bootdevice/by-name/spunvm /mnt/vendor/spunvm rw noatime shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0
-
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -207,7 +202,7 @@ on early-boot
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
     # Enable WLAN SSR recovery
-    write /sys/kernel/cnss/recovery 1
+    #write /sys/kernel/cnss/recovery 1
     start vendor.sensors
     verity_update_state
 
@@ -219,7 +214,7 @@ on boot
     chown system system /sys/class/thermal/thermal_message/balance_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
     chown system system /sys/module/perf_helper/mimd/mimdtrigger
-    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-7
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
@@ -245,6 +240,15 @@ on boot
     chown system system /sys/class/qcom-battery/input_suspend
     chmod 774 /sys/class/qcom-battery/input_suspend
 
+    # perfservice access for venidng control
+    mkdir /dev/cpuset/vending
+    chown system system /dev/cpuset/vending
+    chown system system /dev/cpuset/vending/tasks
+    chown system system /dev/cpuset/vending/cgroup.procs
+    chmod 0664 /dev/cpuset/vending/cgroup.procs
+    chmod 0664 /dev/cpuset/vending/tasks
+    write /dev/cpuset/vending/mems 0
+    write /dev/cpuset/vending/cpus 0-7
 
     # game plaid mode
     chown system system  /sys/devices/virtual/gpu_plaid/plaid/game_data
@@ -285,7 +289,7 @@ on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
 on property:vendor.display.lcd_density=640
-   setprop dalvik.vm.heapgrowthlimit 512m
+   setprop dalvik.vm.heapgrowthlimit 256m
 
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1
@@ -312,22 +316,22 @@ on property:vendor.audio.cit.spkcal.copy=true
 #
 # _if oldCaliFile isn't exist then  2 and 4 will failed(try again will success).
 # it could optimized when property action in front of spkcal
-# 
+#
 
     # 2.backup
     chmod 600 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 600 /mnt/vendor/persist/audio/crus_calr.txt
     copy /mnt/vendor/persist/audio/crus_calr.bin /mnt/vendor/persist/audio/crus_calr.bin.bak
     copy /mnt/vendor/persist/audio/crus_calr.txt /mnt/vendor/persist/audio/crus_calr.txt.bak
-    
+
     # 3.newCreate
     write /mnt/vendor/persist/audio/crus_calr.bin ""
     write /mnt/vendor/persist/audio/crus_calr.txt ""
-    
+
     # 4.recovery
     copy /mnt/vendor/persist/audio/crus_calr.bin.bak /mnt/vendor/persist/audio/crus_calr.bin
     copy /mnt/vendor/persist/audio/crus_calr.txt.bak /mnt/vendor/persist/audio/crus_calr.txt
-    
+
     chmod 666 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 666 /mnt/vendor/persist/audio/crus_calr.txt
 
@@ -598,8 +602,15 @@ on post-fs-data
     chmod 0662 /dev/miev
     restorecon /dev/miev
 
+on property:ro.product.device=yudi && property:ro.vendor.ril.oem.sno=*
+    setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}
+
+on property:ro.product.device=yudi && property:ro.vendor.ril.oem.psno=*
+    setprop ro.ril.oem.psno ${ro.vendor.ril.oem.psno}
+
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.sno=*
     setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}
+
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.psno=*
     setprop ro.ril.oem.psno ${ro.vendor.ril.oem.psno}
 

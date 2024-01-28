@@ -1,0 +1,6 @@
+# Copyright (C) 2024 Paranoid Android
+#
+# SPDX-License-Identifier: Apache-2.0
+
+on property:vendor.post_boot.parsed=1
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.mi_perf.sh

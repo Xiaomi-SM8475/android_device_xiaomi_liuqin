@@ -167,6 +167,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
+    init.mi_perf.rc \
+    init.mi_perf.sh \
     init.mi_service.rc \
     ueventd.xiaomi.rc
 

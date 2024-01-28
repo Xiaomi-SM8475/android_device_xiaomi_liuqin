@@ -63,6 +63,7 @@
 #
 
 import /vendor/etc/init/hw/init.qti.kernel.rc
+import /vendor/etc/init/hw/init.mi_perf.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.mi_service.rc
 import /vendor/etc/init/hw/init.batterysecret.rc

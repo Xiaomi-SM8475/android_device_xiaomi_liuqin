@@ -18,9 +18,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.mi_perf.rc",
+    src: "init.mi_perf.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.mi_service.rc",
     src: "init.mi_service.rc",
     sub_dir: "init/hw",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mi_perf.sh",
+    src: "init.mi_perf.sh",
     vendor: true,
 }
 

@@ -28,7 +28,7 @@ import com.xiaomi.settings.touch.TfWrapper;
 public class PenUtilsService extends Service {
 
     private static final String TAG = "XiaomiPartsPenUtilsService";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     private static final String STYLUS_KEY = "stylus_switch_key";
 

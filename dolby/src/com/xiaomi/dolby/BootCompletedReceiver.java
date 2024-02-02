@@ -16,7 +16,7 @@ import com.xiaomi.dolby.DolbyUtils;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final String TAG = "XiaomiDolby";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     @Override
     public void onReceive(final Context context, Intent intent) {

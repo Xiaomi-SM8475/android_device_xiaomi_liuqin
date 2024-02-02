@@ -17,7 +17,7 @@ import android.view.InputDevice;
 public class KeyboardUtilsService extends Service {
 
     private static final String TAG = "XiaomiPartsKeyboardUtilsService";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     private static InputManager mInputManager;
 

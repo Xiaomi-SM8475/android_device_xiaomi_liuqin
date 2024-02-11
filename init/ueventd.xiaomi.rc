@@ -54,7 +54,8 @@ subsystem mi_display
 # Xiaomi display feature
 /dev/mi_display/*         0666   root       graphics
 
-# FPC fingerprint
+# Fingerprint
+/dev/goodix_fp                                                  0666  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* irq              0700  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* irq_enable       0700  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* wakeup_enable    0700  system system

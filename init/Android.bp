@@ -31,12 +31,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.mi_perf.sh",
-    src: "init.mi_perf.sh",
-    vendor: true,
-}
-
 prebuilt_etc {
     name: "ueventd.xiaomi.rc",
     filename: "ueventd.rc",

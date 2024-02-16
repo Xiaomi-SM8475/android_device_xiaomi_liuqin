@@ -168,7 +168,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
     init.mi_perf.rc \
-    init.mi_perf.sh \
     init.mi_service.rc \
     ueventd.xiaomi.rc
 
@@ -248,10 +247,6 @@ PRODUCT_PACKAGES += \
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # QMI
 PRODUCT_PACKAGES += \

@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-V1-ndk_platform.vendor

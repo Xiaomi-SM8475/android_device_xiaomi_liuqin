@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "LiuqinFrameworksAOSPA",
-    product_specific: true,
+    device_specific: true,
 }

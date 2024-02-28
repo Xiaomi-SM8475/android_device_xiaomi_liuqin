@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "LiuqinSetupWizardAOSPA",
-    product_specific: true,
+    device_specific: true,
 }

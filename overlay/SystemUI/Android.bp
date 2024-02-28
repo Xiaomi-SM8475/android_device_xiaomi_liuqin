@@ -6,5 +6,5 @@
 
 runtime_resource_overlay {
     name: "LiuqinSystemUI",
-    product_specific: true,
+    device_specific: true,
 }

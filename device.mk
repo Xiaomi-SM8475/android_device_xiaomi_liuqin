@@ -232,7 +232,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResTarget \
     LiuqinFrameworks \
     LiuqinFrameworksAOSPA \
     LiuqinLauncher3 \
@@ -240,9 +239,7 @@ PRODUCT_PACKAGES += \
     LiuqinSettingsProvider \
     LiuqinSetupWizardAOSPA \
     LiuqinSystemUI \
-    LiuqinSystemUIAOSPA \
-    LiuqinWifiResTarget \
-    LiuqinWifiResTarget_cape
+    LiuqinSystemUIAOSPA
 
 # Parts
 PRODUCT_PACKAGES += \

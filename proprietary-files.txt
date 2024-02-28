@@ -829,7 +829,6 @@ vendor/firmware/evautil64.mdt
 # Display - from Poco F5 (V14.0.6.0.TMRMIXM)
 vendor/lib64/libhdrdynamic.so|48b912d98089807b49d451163651dcb658008475
 vendor/lib64/libhdrdynamicootf.so|857a8d1908524590f0de56bf2e1ba1e287272e6c
-vendor/lib64/libdisplayconfig.qti.so|1e911a06c7094a77d8218db528b82eefbfd514b7
 vendor/lib64/libsdmextension.so|f80e85481d8f2ce991e4ccba3958a575b39ece09
 
 # Display (Calibration)

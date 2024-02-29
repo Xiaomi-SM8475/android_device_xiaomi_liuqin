@@ -1,14 +1,14 @@
-# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V816.0.2.0.UMYCNXM package, unless pinned
+# Device proprietary files - from Xiaomi Pad 6 Pro MIUI V816.0.4.0.UMYCNXM package, unless pinned
 
-# Adreno Firmware - from Poco F5 (V14.0.6.0.TMRMIXM)
-vendor/firmware/a730_sqe.fw|4c940da4240a8f7ec3bc86d851ddd2985fbdcc88
-vendor/firmware/a730_zap.b00|3a86b13c8eb8e14e2c104a229d93e0092d4ba005
-vendor/firmware/a730_zap.b01|1234230fde1dfa01822a7c64b200e58fd34dfd86
-vendor/firmware/a730_zap.b02|e805f5096eb782f358c4bf47b6f5f703e9690b08
-vendor/firmware/a730_zap.elf|6b8f09631f7aab41c154e697975dc739a150276a
-vendor/firmware/a730_zap.mbn|af276991fd551b9b03c6308f467462e1e72d8bf9
-vendor/firmware/a730_zap.mdt|0c9139dd9ab6b4ff767694222e13b22cbb7f98dd
-vendor/firmware/gmu_gen70000.bin|1ac8d9dd3d405f84c915a4562ff72d244e10bcbd
+# Adreno Firmware
+vendor/firmware/a730_sqe.fw
+vendor/firmware/a730_zap.b00
+vendor/firmware/a730_zap.b01
+vendor/firmware/a730_zap.b02
+vendor/firmware/a730_zap.elf
+vendor/firmware/a730_zap.mbn
+vendor/firmware/a730_zap.mdt
+vendor/firmware/gmu_gen70000.bin
 
 # ADSP
 vendor/bin/adsprpcd
@@ -826,10 +826,10 @@ vendor/firmware/evautil64.b06
 vendor/firmware/evautil64.b07
 vendor/firmware/evautil64.mdt
 
-# Display - from Poco F5 (V14.0.6.0.TMRMIXM)
-vendor/lib64/libhdrdynamic.so|48b912d98089807b49d451163651dcb658008475
-vendor/lib64/libhdrdynamicootf.so|857a8d1908524590f0de56bf2e1ba1e287272e6c
-vendor/lib64/libsdmextension.so|f80e85481d8f2ce991e4ccba3958a575b39ece09
+# Display
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
+vendor/lib64/libsdmextension.so
 
 # Display (Calibration)
 vendor/etc/display/qdcm_calib_data_xiaomi_m81_36_02_0a_dualdsi_dsc_lcd_video_panel.json

@@ -115,6 +115,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # Display
+TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC := false
+
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V5-ndk_platform.vendor

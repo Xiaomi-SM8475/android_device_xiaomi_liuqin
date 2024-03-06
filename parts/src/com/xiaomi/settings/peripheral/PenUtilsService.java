@@ -17,6 +17,7 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.InputDevice;
 
@@ -31,12 +32,18 @@ public class PenUtilsService extends Service {
 
     private static final String STYLUS_KEY = "stylus_switch_key";
 
+    private static final String KEY_PEAK_REFRESH_RATE = "peak_refresh_rate";
+    private static final String KEY_MIN_REFRESH_RATE = "min_refresh_rate";
+
     private static final String SURFACE_FLINGER_SERVICE_KEY = "SurfaceFlinger";
     private static final String SURFACE_COMPOSER_INTERFACE_KEY = "android.ui.ISurfaceComposer";
     private static final int SURFACE_FLINGER_DISABLE_OVERLAYS_CODE = 1008;
 
     private static boolean mIsPenModeEnabled;
     private static boolean mIsPenModeForced;
+
+    private static float mDefaultMinRate;
+    private static float mDefaultPeakRate;
 
     private static InputManager mInputManager;
     private static SharedPreferences mSharedPrefs;
@@ -52,6 +59,8 @@ public class PenUtilsService extends Service {
         mSharedPrefs.registerOnSharedPreferenceChangeListener(mSharedPrefsListener);
         mIsPenModeForced = mSharedPrefs.getBoolean(STYLUS_KEY, false);
         mSurfaceFlinger = ServiceManager.getService(SURFACE_FLINGER_SERVICE_KEY);
+        mDefaultMinRate = Settings.System.getFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, 30f);
+        mDefaultPeakRate = Settings.System.getFloat(getContentResolver(), KEY_PEAK_REFRESH_RATE, 144f);
     }
 
     @Override
@@ -64,6 +73,8 @@ public class PenUtilsService extends Service {
     @Override
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "onDestroy");
+        Settings.System.putFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, mDefaultMinRate);
+        Settings.System.putFloat(getContentResolver(), KEY_PEAK_REFRESH_RATE, mDefaultPeakRate);
         super.onDestroy();
     }
 
@@ -88,6 +99,19 @@ public class PenUtilsService extends Service {
         } catch (RemoteException ex) { }
     }
 
+    private void updateRefreshRateSetting() {
+        if (mIsPenModeEnabled) {
+            mDefaultMinRate = Settings.System.getFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, 30f);
+            mDefaultPeakRate = Settings.System.getFloat(getContentResolver(), KEY_PEAK_REFRESH_RATE, 144f);
+            Settings.System.putFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, 120f);
+            Settings.System.putFloat(getContentResolver(), KEY_PEAK_REFRESH_RATE, 120f);
+        } else {
+            Settings.System.putFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, mDefaultMinRate);
+            Settings.System.putFloat(getContentResolver(), KEY_PEAK_REFRESH_RATE, mDefaultPeakRate);
+        }
+
+    }
+
     private void refreshPenMode() {
         if (mIsPenModeForced) {
             if (DEBUG) Log.d(TAG, "refreshPenMode: Pen Mode forced");
@@ -95,6 +119,7 @@ public class PenUtilsService extends Service {
                 mIsPenModeEnabled = true;
                 updatePenMode();
                 updateHardwareOverlaysSetting();
+                updateRefreshRateSetting();
             }
             return;
         }
@@ -105,6 +130,7 @@ public class PenUtilsService extends Service {
                     mIsPenModeEnabled = true;
                     updatePenMode();
                     updateHardwareOverlaysSetting();
+                    updateRefreshRateSetting();
                 }
                 return;
             }
@@ -114,6 +140,7 @@ public class PenUtilsService extends Service {
             mIsPenModeEnabled = false;
             updatePenMode();
             updateHardwareOverlaysSetting();
+            updateRefreshRateSetting();
         }
     }
 

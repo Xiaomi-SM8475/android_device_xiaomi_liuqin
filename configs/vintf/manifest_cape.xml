@@ -697,6 +697,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <!-- QSPM-HAL service-->
+    <!--
     <hal format="hidl">
         <name>vendor.qti.qspmhal</name>
         <transport>hwbinder</transport>
@@ -706,6 +707,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <!-- Trusted UI HAL Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.trustedui</name>

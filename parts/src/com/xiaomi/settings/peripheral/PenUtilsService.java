@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023-2024 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -7,8 +7,10 @@
 package com.xiaomi.settings.peripheral;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.hardware.input.InputManager;
@@ -17,6 +19,7 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.UEventObserver;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.InputDevice;
@@ -24,6 +27,7 @@ import android.view.InputDevice;
 import androidx.preference.PreferenceManager;
 
 import com.xiaomi.settings.touch.TfWrapper;
+import com.xiaomi.settings.utils.FileUtils;
 
 public class PenUtilsService extends Service {
 
@@ -31,6 +35,8 @@ public class PenUtilsService extends Service {
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     private static final String STYLUS_KEY = "stylus_switch_key";
+    private static final String STYLUS_CHARING_PATH = "/sys/class/qcom-battery/reverse_chg_mode";
+    private static final String STYLUS_CHARING_DEVPATH = "DEVPATH=/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger";
 
     private static final String KEY_PEAK_REFRESH_RATE = "peak_refresh_rate";
     private static final String KEY_MIN_REFRESH_RATE = "min_refresh_rate";
@@ -39,6 +45,7 @@ public class PenUtilsService extends Service {
     private static final String SURFACE_COMPOSER_INTERFACE_KEY = "android.ui.ISurfaceComposer";
     private static final int SURFACE_FLINGER_DISABLE_OVERLAYS_CODE = 1008;
 
+    private static boolean mIsPenCharging;
     private static boolean mIsPenModeEnabled;
     private static boolean mIsPenModeForced;
 
@@ -57,6 +64,8 @@ public class PenUtilsService extends Service {
         mInputManager.registerInputDeviceListener(mInputDeviceListener, null);
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mSharedPrefs.registerOnSharedPreferenceChangeListener(mSharedPrefsListener);
+        mUEventObserver.startObserving(STYLUS_CHARING_DEVPATH);
+        mIsPenCharging = FileUtils.readLineInt(STYLUS_CHARING_PATH) == 1;
         mIsPenModeForced = mSharedPrefs.getBoolean(STYLUS_KEY, false);
         mSurfaceFlinger = ServiceManager.getService(SURFACE_FLINGER_SERVICE_KEY);
         mDefaultMinRate = Settings.System.getFloat(getContentResolver(), KEY_MIN_REFRESH_RATE, 30f);
@@ -126,16 +135,17 @@ public class PenUtilsService extends Service {
         for (int id : mInputManager.getInputDeviceIds()) {
             if (isDeviceXiaomiPen(id)) {
                 if (DEBUG) Log.d(TAG, "refreshPenMode: Found Xiaomi Pen");
-                if (!mIsPenModeEnabled) {
+                if (!mIsPenModeEnabled && !mIsPenCharging) {
                     mIsPenModeEnabled = true;
                     updatePenMode();
                     updateHardwareOverlaysSetting();
                     updateRefreshRateSetting();
                 }
-                return;
+                if (!mIsPenCharging) return;
             }
         }
-        if (DEBUG) Log.d(TAG, "refreshPenMode: No Xiaomi Pen found");
+        if (DEBUG && !mIsPenCharging) Log.d(TAG, "refreshPenMode: No Xiaomi Pen found");
+        if (DEBUG && mIsPenCharging) Log.d(TAG, "refreshPenMode: Xiaomi Pen is charging, dont enable pen mode");
         if (mIsPenModeEnabled) {
             mIsPenModeEnabled = false;
             updatePenMode();
@@ -174,4 +184,16 @@ public class PenUtilsService extends Service {
         }
     };
 
+    private final UEventObserver mUEventObserver = new UEventObserver() {
+        @Override
+        public void onUEvent(UEventObserver.UEvent event) {
+            Log.d(TAG, "UEvent received: " + event.toString());
+            String chgModeString = event.get("POWER_SUPPLY_REVERSE_CHG_MODE");
+            if (chgModeString == null) return;
+            boolean chgModeBoolean = Integer.parseInt(chgModeString) == 1;
+            if (mIsPenCharging == chgModeBoolean) return;
+            mIsPenCharging = chgModeBoolean;
+            refreshPenMode();
+        }
+    };
 }

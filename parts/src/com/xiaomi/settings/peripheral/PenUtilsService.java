@@ -16,6 +16,8 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.hardware.input.InputManager;
 import android.hardware.input.InputManager.InputDeviceListener;
 import android.os.IBinder;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -23,9 +25,11 @@ import android.os.UEventObserver;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.InputDevice;
+import android.widget.Toast;
 
 import androidx.preference.PreferenceManager;
 
+import com.xiaomi.settings.R;
 import com.xiaomi.settings.touch.TfWrapper;
 import com.xiaomi.settings.utils.FileUtils;
 
@@ -193,6 +197,16 @@ public class PenUtilsService extends Service {
             boolean chgModeBoolean = Integer.parseInt(chgModeString) == 1;
             if (mIsPenCharging == chgModeBoolean) return;
             mIsPenCharging = chgModeBoolean;
+            if (mIsPenCharging) {
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    public void run() {
+                        Toast.makeText(getApplicationContext(),
+                                getApplicationContext().getString(R.string.stylus_charging_toast,
+                                        event.get("POWER_SUPPLY_REVERSE_PEN_SOC")),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
             refreshPenMode();
         }
     };

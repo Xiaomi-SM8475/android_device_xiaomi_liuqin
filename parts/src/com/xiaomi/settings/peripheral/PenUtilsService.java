@@ -166,6 +166,7 @@ public class PenUtilsService extends Service {
     
     private OnSharedPreferenceChangeListener mSharedPrefsListener = new OnSharedPreferenceChangeListener() {
         public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+            if (DEBUG) Log.d(TAG, "onSharedPreferenceChanged: " + key);
             if (key.equals(STYLUS_KEY)) {
                 mIsPenModeForced = prefs.getBoolean(STYLUS_KEY, false);
                 refreshPenMode();

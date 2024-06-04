@@ -944,31 +944,12 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
 
-# Media (Dolby)
-vendor/bin/hw/dolbycodec2|cd809c9d2615351c4c63ebb29231a0e067619267
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/etc/dolby/dax-default.xml
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolby_vision_codec2.rc
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/etc/dolby_vision.cfg
-vendor/lib64/c2.dolby.avc.dec.so
-vendor/lib64/c2.dolby.avc.sec.dec.so
-vendor/lib64/c2.dolby.client.so
-vendor/lib64/c2.dolby.egl.so
-vendor/lib64/c2.dolby.hevc.dec.so
-vendor/lib64/c2.dolby.hevc.enc.so
-vendor/lib64/c2.dolby.hevc.sec.dec.so
-vendor/lib64/c2.dolby.store.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/libdolbyottcameracontrol.so
-vendor/lib64/libdolbyvision.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-
 # Media (Dolby Audio) - from Xiaomi Pad 6 Max (V816.0.2.0.UMHCNXM)
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|789bd12550265d7470dd876312dba970b7e1c6aa
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service|b63e07fc6d6f8c9c7b3265aed79ab20dc5b19bac
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
 vendor/lib64/soundfx/libdlbvol.so|1ebd52ecc1a42e1ec0eb785e541b08d191bf9924
 vendor/lib64/soundfx/libhwdap.so|1058720b5930196370e1e792a14e60e16c9a46e1
 vendor/lib64/soundfx/libswgamedap.so|cac12e23c860270775986d56c8f9b8f58ac07be3
@@ -978,7 +959,26 @@ vendor/lib64/libcodec2_soft_ddpdec.so|55275a7abcfde2d3f44fc48f9dd7a976fb98ebc1
 vendor/lib64/libcodec2_store_dolby.so|d0a85979f9c622cc5ad4071635271fe51c9ecb55
 vendor/lib64/libdapparamstorage.so|6dd6cf3bd92710cdba1cb981b52e64dca2407bd1
 vendor/lib64/libdeccfg.so|8ef3036d0b7a5f2caae277e21b5cf5174b2f085f
+vendor/lib64/libdlbdsservice.so|d4f9aa59644b1f90b221f188fc25a0b54db84c39
 vendor/lib64/libdlbpreg.so|e1588ec15d1b328c037ffd2f80c426dcd90d6467
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|63db226e3f51448c094ef00ec9a92be089050219
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|e5c3409c9422297055cc79eff526e625be79ac32
+
+# Media (Dolby Vision)
+vendor/bin/hw/dolbycodec2|cd809c9d2615351c4c63ebb29231a0e067619267
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:vendor/etc/init/dolby_vision_codec2.rc
+vendor/etc/dolby_vision.cfg
+vendor/lib64/c2.dolby.avc.dec.so
+vendor/lib64/c2.dolby.avc.sec.dec.so
+vendor/lib64/c2.dolby.client.so
+vendor/lib64/c2.dolby.egl.so
+vendor/lib64/c2.dolby.hevc.dec.so
+vendor/lib64/c2.dolby.hevc.enc.so
+vendor/lib64/c2.dolby.hevc.sec.dec.so
+vendor/lib64/c2.dolby.store.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyvision.so
 
 # Memory
 vendor/lib64/libvmmem.so

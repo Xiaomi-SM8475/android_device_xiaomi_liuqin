@@ -225,6 +225,7 @@ endif
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_hidl@1.2.vendor \
+    libcodec2_hidl_shim.vendor \
     libcodec2_soft_common.vendor \
     libsfplugin_ccodec_utils.vendor
 

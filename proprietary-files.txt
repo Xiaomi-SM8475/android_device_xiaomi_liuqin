@@ -903,6 +903,12 @@ vendor/lib64/libloc_mq_client.so
 # HDCP
 vendor/lib64/libmm-hdcpmgr.so
 
+# Hotword Enrollment - from Realme Pad Pro 5G (V816.0.1.0.UFSINXM)
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk|1f9eb653ab838483ca643976bd9d7aca02755bf5
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|5c08b6e509409c149557c1e9895af9304df87fc5
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|99cfd80965c170f4885a7dd62c0eaad1a0c7840f
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|b768584073c6348713ffd0139d44039c9efc775a
+
 # HubUI - from Google Pixel Tablet (TQ3A.230605.009.A1)
 product/etc/appcompat/compat_framework_overrides.xml|3170cd414d4d6d3a4a9ad518c5f9137afb3da453
 product/etc/permissions/com.google.assistant.hubui.xml|954bd557c143ce8840386e849102aca834386ceb

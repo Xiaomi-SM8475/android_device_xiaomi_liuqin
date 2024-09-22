@@ -62,7 +62,7 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_cape.xml|vendor/etc/media_codecs_cape_vendor.xml)
-            sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+            sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
             ;;
         vendor/etc/camera/liuqin_enhance_motiontuning.xml | vendor/etc/camera/liuqin_motiontuning.xml)
             sed -i 's/<?xml=/<?xml /g' "${2}"

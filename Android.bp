@@ -9,3 +9,16 @@ soong_namespace {
         "hardware/xiaomi",
     ],
 }
+
+install_symlink {
+    name: "firmware_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/qca6490/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/qca6490/wlan_mac.bin",
+}
+install_symlink {
+    name: "firmware_WCNSS_qcom_cfg.ini_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/qca6490/WCNSS_qcom_cfg.ini",
+    symlink_target: "/vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini",
+}

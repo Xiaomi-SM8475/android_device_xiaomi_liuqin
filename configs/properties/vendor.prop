@@ -23,7 +23,8 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 drm.service.enabled=true
 
 # Fingerprint
-ro.hardware.fingerprint=fpc
+persist.vendor.fingerprint.sensor_location=1680|0|60|local:4630947141052476290,1680|0|60|local:4630947200012256898
+persist.vendor.fingerprint.type=side
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp

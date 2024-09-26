@@ -879,7 +879,7 @@ vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti

@@ -98,6 +98,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libcodec2_hidl_shim.so'),
     (
+        'vendor/lib64/libqcodec2_core.so',
+    ): blob_fixup()
+        .add_needed('libcodec2_shim.so'),
+    (
         'vendor/lib64/libQnnGpu.so',
     ): blob_fixup()
         .strip_debug_sections(),

@@ -1005,12 +1005,6 @@ vendor/etc/public.libraries.txt
 # Neural Networks
 vendor/lib64/libQnnHtpAltPrepV69Stub.so
 
-# OMX
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libEvrcSwCodec.so
-vendor/lib64/libFlacSwDec.so
-
 # Perf
 vendor/etc/perf/perfboostsconfig.xml
 

@@ -127,8 +127,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630947200012256898.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947200012256898.xml
 
 # Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
+#PRODUCT_PACKAGES += \
+#    XiaomiDolby
 
 # DPM
 PRODUCT_PACKAGES += \

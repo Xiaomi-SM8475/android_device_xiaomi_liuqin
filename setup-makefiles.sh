@@ -23,6 +23,45 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"vendor/qcom/common/system/telephony",
+		"vendor/qcom/common/vendor/adreno-s",
+		"vendor/qcom/common/vendor/display/5.10",
+        "vendor/qcom/common/vendor/media",
+EOF
+}
+
+function lib_to_package_fixup_vendor_variants() {
+    if [ "$2" != "vendor" ]; then
+        return 1
+    fi
+
+    case "$1" in
+        audio.primary.taro | \
+        libsdmextension)
+            echo "$1_liuqin"
+            ;;
+        vendor.qti.hardware.limits@1.[0-1] | \
+        vendor.qti.hardware.ListenSoundModel@1.0 | \
+        vendor.qti.hardware.wifidisplaysession@1.0 | \
+        vendor.xiaomi.hardware.mlipay@1.[0-1] | \
+        vendor.xiaomi.hardware.mtdservice@1.0 | \
+        vendor.xiaomi.hw.touchfeature@1.0)
+            echo "$1_vendor"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+function lib_to_package_fixup() {
+    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+        lib_to_package_fixup_proto_3_9_1 "$1" ||
+        lib_to_package_fixup_vendor_variants "$@"
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 

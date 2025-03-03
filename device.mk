@@ -67,11 +67,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     charging \
     display \
     init \
-    keymaster \
     media \
     overlay \
     perf \
-    qseecomd \
     usb \
     wfd \
     wlan

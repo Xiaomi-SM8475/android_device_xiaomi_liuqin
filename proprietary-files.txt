@@ -111,16 +111,8 @@ vendor/lib/rfsa/adsp/misound_res_spk.bin
 vendor/lib/rfsa/adsp/misound_res_spk4ch.bin
 vendor/lib/rfsa/adsp/weak_refs.so
 
-# AGMIPC
-vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
-vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
-
 # Audio
-vendor/etc/vintf/manifest/manifest_non_qmaa.xml
-vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/lib64/hw/audio.primary.taro.so
+vendor/lib64/hw/audio.primary.taro.so;MODULE_SUFFIX=_liuqin;OVERRIDES=audio.primary.taro
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/hw/sound_trigger.primary.taro.so
 vendor/lib64/libadm.so
@@ -136,26 +128,21 @@ vendor/lib64/libbatterylistener.so
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libcrussp.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/libfmpal.so
-vendor/lib64/libkaraokepal.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
-vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
-vendor/lib64/libsndcardparser.so
 vendor/lib64/libxlog.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio (ACDB)
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
@@ -179,15 +166,19 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 
 # Audio (AGM)
+vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
 vendor/bin/agmcap
 vendor/bin/agmcompressplay
 vendor/bin/agmplay
+vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
 vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
+vendor/lib64/libsndcardparser.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio (Configs)
 vendor/etc/audio/sku_cape/audio_effects.xml
@@ -239,7 +230,6 @@ vendor/lib64/soundfx/libbundlewrapper.so
 vendor/lib64/soundfx/libdownmix.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
-vendor/lib64/soundfx/libhapticgenerator.so
 vendor/lib64/soundfx/libldnhncr.so
 vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libreverbwrapper.so
@@ -258,7 +248,6 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/lib_bt_aptx.so
 vendor/lib64/lib_bt_ble.so
@@ -270,7 +259,6 @@ vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
@@ -595,8 +583,8 @@ vendor/lib64/libSnpeHtpV69Stub.so
 vendor/lib64/libXMFaceFocus.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so
-vendor/lib64/libalhLDC.so
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libanc_supervq.so
@@ -641,6 +629,7 @@ vendor/lib64/libcom.xiaomi.mawutils.so
 vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libdeflicker.so
+vendor/lib64/libdlrmsc.so
 vendor/lib64/libhdr10plus.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
@@ -829,7 +818,7 @@ vendor/firmware/evautil64.mdt
 # Display
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
-vendor/lib64/libsdmextension.so
+vendor/lib64/libsdmextension.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libsdmextension
 
 # Display (Calibration)
 vendor/etc/display/qdcm_calib_data_xiaomi_m81_36_02_0a_dualdsi_dsc_lcd_video_panel.json
@@ -868,6 +857,7 @@ vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
+vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # DRM (Widevine)
@@ -876,6 +866,7 @@ vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libbase64.so
+vendor/lib64/libminkdescriptor.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
@@ -899,9 +890,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/libgps.utils.so
 vendor/lib64/libloc_base_util.so
 vendor/lib64/libloc_mq_client.so
-
-# HDCP
-vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/libpal_net_if.so
 
 # Hotword Enrollment - from Realme Pad Pro 5G (V816.0.1.0.UFSINXM)
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk|1f9eb653ab838483ca643976bd9d7aca02755bf5
@@ -995,9 +984,9 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so;MODULE_SUFFIX=_vendor
 
 # Native public libraries
 vendor/etc/public.libraries.txt
@@ -1054,9 +1043,11 @@ vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
+vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
+vendor/lib64/libqdpr.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
@@ -1183,7 +1174,6 @@ vendor/etc/sensor_diag.cfg
 
 # Snapdragon Computer Vision Engine
 vendor/lib64/libcv_common.so
-vendor/lib64/libfastcrc.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveCommon.so
@@ -1191,7 +1181,6 @@ vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/libvideoutils.so
 
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
@@ -1234,8 +1223,8 @@ vendor/etc/thermal-videochat.conf
 vendor/etc/thermal-yuanshen.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
-vendor/lib64/vendor.qti.hardware.limits@1.0.so
-vendor/lib64/vendor.qti.hardware.limits@1.1.so
+vendor/lib64/vendor.qti.hardware.limits@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.limits@1.1.so;MODULE_SUFFIX=_vendor
 
 # Time Services
 vendor/app/TimeService/TimeService.apk
@@ -1256,7 +1245,7 @@ vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
 vendor/etc/init.panel_info.sh
 vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so;MODULE_SUFFIX=_vendor
 
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
@@ -1298,10 +1287,6 @@ vendor/lib64/libvpphvx.so
 vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
 vendor/lib64/libvpptestutils.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
 # VPU (Firmware)
 vendor/firmware/vpu20_4v.b00
@@ -1320,9 +1305,8 @@ vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v.mdt
 
 # Wi-Fi
-vendor/bin/cnss-daemon
+vendor/bin/cnss-daemon;MODULE_SUFFIX=_liuqin;OVERRIDES=cnss-daemon
 vendor/bin/nv_mac
-vendor/lib64/libwifi-hal.so
 
 # Wi-Fi (Configs)
 vendor/etc/wifi/p2p_supplicant_overlay.conf
@@ -1372,5 +1356,5 @@ vendor/lib64/libwfduibcsrc_vendor.so
 vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so

@@ -824,6 +824,10 @@ vendor/lib64/libsdmextension.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libsdmextension
 vendor/etc/display/qdcm_calib_data_xiaomi_m81_36_02_0a_dualdsi_dsc_lcd_video_panel.json
 vendor/etc/display/qdcm_calib_data_xiaomi_m81_42_02_0b_dualdsi_dsc_lcd_video_panel.json
 
+# Display (Config)
+product/etc/displayconfig/display_id_4630947141052476290.xml:vendor/etc/displayconfig/display_id_4630947141052476290.xml
+product/etc/displayconfig/display_id_4630947200012256898.xml:vendor/etc/displayconfig/display_id_4630947200012256898.xml
+
 # DPM
 vendor/bin/dpmQmiMgr
 vendor/bin/vendor.dpmd

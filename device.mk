@@ -103,21 +103,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.7.vendor \
-    vendor.qti.hardware.camera.aon@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
-
 # Characteristics
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # Display
 TARGET_PANEL_DIMENSION_HAS_EXTRA_PRECISION := true
 TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC := false
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
-    vendor.qti.hardware.display.config-V5-ndk_platform.vendor
 
 # Display Config
 PRODUCT_COPY_FILES += \
@@ -128,15 +119,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
-# DPM
-PRODUCT_PACKAGES += \
-    libhidlbase_shim
-
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey \
-    libdrm.vendor
+    android.hardware.drm-service.clearkey
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -149,20 +134,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.xiaomi \
-    android.hardware.health-service.xiaomi_recovery \
-    android.hardware.health@1.0.vendor \
-    android.hardware.health@2.1.vendor
-
-# Identity
-PRODUCT_PACKAGES += \
-    android.hardware.identity-V3-ndk_platform.vendor
+    android.hardware.health-service.xiaomi_recovery
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -186,17 +161,6 @@ KERNEL_PREBUILT_DIR := device/xiaomi/liuqin-kernel
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk_platform.vendor \
-    android.hardware.security.secureclock-V1-ndk_platform.vendor \
-    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
-    android.hardware.security.rkp-V1-ndk_platform.vendor \
-    libkeymaster_messages.vendor
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -223,21 +187,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
 endif
 
-# Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_hidl@1.2.vendor \
-    libcodec2_hidl_shim.vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
-
 # Mlipay
 PRODUCT_PACKAGES += \
     IFAAService
-
-# Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks-V1-ndk_platform.vendor
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -253,10 +205,6 @@ PRODUCT_PACKAGES += \
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -290,11 +238,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti-v2
 
-# Trusted User Interface
-PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor \
-    vendor.qti.hardware.systemhelper@1.0.vendor
-
 # Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -317,7 +260,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6490/WCNSS_qcom_cfg.ini \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libwfdaac_vendor

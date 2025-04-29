@@ -24,7 +24,11 @@
     <hal format="hidl">
         <name>android.hardware.media.c2</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IComponentStore/dolby</fqname>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>dolby</instance>
+        </interface>
         <fqname>@1.0::IComponentStore/default1</fqname>
-    </hal>
+   </hal>
 </manifest>

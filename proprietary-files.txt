@@ -869,11 +869,9 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libbase64.so
 vendor/lib64/libminkdescriptor.so
+vendor/lib64/liboemcrypto.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
-
-# DRM (Widevine L1) - from Xiaomi Pad 6 Pro V14.0.9.0.TMYCNXM
-vendor/lib64/liboemcrypto.so|1b1cf9c39a4960be794da3443438f2b11203a3fa
 
 # EVA
 vendor/etc/eva/facedetection/model3.dat

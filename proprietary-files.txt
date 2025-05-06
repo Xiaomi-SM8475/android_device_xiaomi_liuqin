@@ -112,6 +112,8 @@ vendor/lib/rfsa/adsp/misound_res_spk4ch.bin
 vendor/lib/rfsa/adsp/weak_refs.so
 
 # Audio
+vendor/etc/vintf/manifest/manifest_non_qmaa.xml
+vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/lib64/hw/audio.primary.taro.so;MODULE_SUFFIX=_liuqin;OVERRIDES=audio.primary.taro
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/hw/sound_trigger.primary.taro.so

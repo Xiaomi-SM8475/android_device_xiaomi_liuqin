@@ -28,7 +28,7 @@ function vendor_imports() {
 		"vendor/qcom/common/system/telephony",
 		"vendor/qcom/common/vendor/adreno-s",
 		"vendor/qcom/common/vendor/display/5.10",
-        "vendor/qcom/common/vendor/media",
+		"vendor/qcom/common/vendor/media",
 EOF
 }
 

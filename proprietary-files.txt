@@ -1,4 +1,4 @@
-# Device proprietary files - from Xiaomi Pad 6 Pro MIUI OS2.0.4.0.VMYCNXM package, unless pinned
+# Device proprietary files - from Xiaomi Pad 6 Pro MIUI OS2.0.8.0.VMYCNXM package, unless pinned
 
 # Adreno Firmware
 vendor/firmware/a730_sqe.fw

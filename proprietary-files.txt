@@ -943,8 +943,8 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
 
 # Media (Dolby Audio) - from Xiaomi Pad 6 Max (OS2.0.4.0.VMYCNXM)
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|789bd12550265d7470dd876312dba970b7e1c6aa
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service|b63e07fc6d6f8c9c7b3265aed79ab20dc5b19bac
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|f2bdf53f4d9ccc269a0df097e4b0acc7f3badb89
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|e2afe22b6633f0b19fb39830c82c871cc0bc4d60
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
@@ -967,11 +967,11 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/dolby_vision.cfg
 
 # Media (Dolby Vision) - from Xiaomi Pad 6 Max (OS2.0.4.0.VMYCNXM)
-vendor/bin/hw/dolbycodec2|3be3be9e6e7e5a2190238d5ac1116cce63bea781
+vendor/bin/hw/dolbycodec2|b9a20e1d958b0338ac946fca6b265c7477caf263
 vendor/etc/init/dolby_vision_codec2.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
 vendor/lib64/c2.dolby.avc.dec.so|439a00c49d07e4fa2451162f75ad1ec6dc5b1ede
 vendor/lib64/c2.dolby.avc.sec.dec.so|9dfdde23db39260bcba3a1d417dd07a5b521f411
-vendor/lib64/c2.dolby.client.so|37af8d7b8017104f32984340500b7d7bb6a63431
+vendor/lib64/c2.dolby.client.so|afdeb2e9fa5d27088c3777bb315e9b959d6e9b5f
 vendor/lib64/c2.dolby.egl.so|11843f482039be68f002575585730f4369ac906c
 vendor/lib64/c2.dolby.hevc.dec.so|91f401898340cb8fe34ff9068023805947c6af84
 vendor/lib64/c2.dolby.hevc.enc.so|8e12f410be76ed42cdfd2cad132d6b42750d20a2

@@ -929,6 +929,18 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti-rkp.xml
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymint.so
 
+# Media - from Xiaomi Pad 6 Max (OS2.0.4.0.VMYCNXM)
+vendor/lib64/libqcodec2_base.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_base|9f92947357240d1a4f333469259c993cc71b396c
+vendor/lib64/libqcodec2_basecodec.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_basecodec|b7e88a7975e9a39faaf8d6755950e4ab70f8386a
+vendor/lib64/libqcodec2_core.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_core|9900bede4f5de78ff5ac73fa34cb40cc7996d34c
+vendor/lib64/libqcodec2_filterbase.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_filterbase|45b2453d2ec982043170d85c8d337fe3fd804628
+vendor/lib64/libqcodec2_hooks.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_hooks|cd4e580a6f51632c9064d0235d279c9d710ecb71
+vendor/lib64/libqcodec2_mockfilter.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_mockfilter|c40dad7c10c2c41f6e3531d7f6965ceb205fb89b
+vendor/lib64/libqcodec2_mockqc2filter.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_mockqc2filter|6a39027507cb26d82216cfe6efb9d211d49c7f49
+vendor/lib64/libqcodec2_platform.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_platform|f84f11aebfb3a01b97d0d0278c1bfb838b269794
+vendor/lib64/libqcodec2_utils.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_utils|45f5a3fe9dee0f145c4e32a82e86cf7c285bf5fd
+vendor/lib64/libqcodec2_v4l2codec.so;MODULE_SUFFIX=_liuqin;OVERRIDES=libqcodec2_v4l2codec|e470f398ab57cdc5cf71b7c64302529e358be50c
+
 # Media (Configs)
 vendor/etc/media_cape/video_system_specs.json
 vendor/etc/media_codecs.xml

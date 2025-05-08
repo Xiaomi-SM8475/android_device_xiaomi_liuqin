@@ -37,6 +37,16 @@ lib_fixups: lib_fixups_user_type = {
     (
         'audio.primary.taro',
         'libsdmextension',
+        'libqcodec2_base',
+        'libqcodec2_basecodec',
+        'libqcodec2_core',
+        'libqcodec2_filterbase',
+        'libqcodec2_hooks',
+        'libqcodec2_mockfilter',
+        'libqcodec2_mockqc2filter',
+        'libqcodec2_platform',
+        'libqcodec2_utils',
+        'libqcodec2_v4l2codec',
     ): lib_fixup_liuqin_suffix,
     (
         'vendor.qti.hardware.limits@1.0',

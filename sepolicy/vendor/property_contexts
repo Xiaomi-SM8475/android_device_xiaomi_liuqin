@@ -1,0 +1,9 @@
+# Fingerprint
+persist.vendor.fingerprint.           u:object_r:vendor_fp_prop:s0
+persist.vendor.fpc.                   u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.                u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.info            u:object_r:vendor_fp_info_prop:s0
+persist.vendor.sys.fp.uid             u:object_r:vendor_fp_info_prop:s0
+
+# Panel
+vendor.panel.display.                 u:object_r:vendor_panel_info_prop:s0

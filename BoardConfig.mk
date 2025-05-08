@@ -77,8 +77,6 @@ BOARD_KERNEL_CMDLINE := \
     mtdoops.fingerprint=$(AOSPA_VERSION) \
     video=vfb:640x400,bpp=32,memsize=3072000
 
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
-
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
@@ -133,7 +131,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/xiaomi/sepolicy/SEPolicy.mk
-#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

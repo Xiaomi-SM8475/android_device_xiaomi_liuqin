@@ -1,0 +1,31 @@
+typeattribute parts_app mlstrustedsubject;
+
+app_domain(parts_app)
+
+binder_use(parts_app)
+
+hal_client_domain(parts_app, hal_touchfeature_xiaomi)
+
+binder_call(parts_app, hal_touchfeature_xiaomi)
+
+allow parts_app {
+  activity_service
+  activity_task_service
+  content_capture_service
+  netstats_service
+  vendor_perf_service
+}:service_manager find;
+
+allow parts_app {
+  hal_touchfeature_xiaomi_hwservice
+}:hwservice_manager find;
+
+allow parts_app system_app_data_file:dir create_dir_perms;
+allow parts_app system_app_data_file:{
+  file
+  lnk_file
+} create_file_perms;
+
+allow parts_app sysfs_tp_touchfeature:file rw_file_perms;
+
+allow parts_app self:netlink_kobject_uevent_socket {create setopt bind read };

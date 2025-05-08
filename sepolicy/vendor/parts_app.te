@@ -1,0 +1,2 @@
+allow parts_app vendor_sysfs_qcom_battery:dir r_dir_perms;
+allow parts_app vendor_sysfs_qcom_battery:file r_file_perms;

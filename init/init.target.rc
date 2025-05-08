@@ -68,9 +68,6 @@ import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.mi_service.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
 
-on property:sys.boot_completed=1
-    chmod 0640 /sys/fs/selinux/enforce
-
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
     export MEMTAG_OPTIONS off

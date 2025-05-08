@@ -1,0 +1,2 @@
+# Parts
+user=system seinfo=platform isPrivApp=true name=com.xiaomi.settings domain=parts_app type=system_app_data_file levelFrom=all

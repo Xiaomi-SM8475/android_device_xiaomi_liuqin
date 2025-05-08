@@ -1,0 +1,2 @@
+allow system_server vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+get_prop(system_server, vendor_fp_prop)

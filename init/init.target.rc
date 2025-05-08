@@ -213,6 +213,8 @@ on boot
     chown system system /sys/class/thermal/thermal_message/board_sensor_temp_comp
     chown system system /sys/class/thermal/thermal_message/cpu_nolimit_temp
     chown system system /sys/class/thermal/thermal_message/balance_mode
+    chown system system /sys/class/thermal/power_save/power_level
+    chown system system /sys/class/thermal/power_save/powersave_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
     chown system system /sys/module/perf_helper/mimd/mimdtrigger
     write /dev/cpuset/audio-app/cpus 0-7
@@ -352,6 +354,24 @@ on property:vendor.audio.cit.spkcal.copy=true
 
     chmod 666 /mnt/vendor/persist/audio/aw_calr.bin
     chmod 666 /mnt/vendor/persist/audio/aw_calr.txt
+
+    # foursemi
+    # 2.backup
+    chmod 600 /mnt/vendor/persist/audio/fsalgo_rdc.bin
+    chmod 600 /mnt/vendor/persist/audio/fsalgo_rdc.txt
+    copy /mnt/vendor/persist/audio/fsalgo_rdc.bin /mnt/vendor/persist/audio/fsalgo_rdc.bin.bak
+    copy /mnt/vendor/persist/audio/fsalgo_rdc.txt /mnt/vendor/persist/audio/fsalgo_rdc.txt.bak
+
+    # 3.newCreate
+    write /mnt/vendor/persist/audio/fsalgo_rdc.bin ""
+    write /mnt/vendor/persist/audio/fsalgo_rdc.txt ""
+
+    # 4.recovery
+    copy /mnt/vendor/persist/audio/fsalgo_rdc.bin.bak /mnt/vendor/persist/audio/fsalgo_rdc.bin
+    copy /mnt/vendor/persist/audio/fsalgo_rdc.txt.bak /mnt/vendor/persist/audio/fsalgo_rdc.txt
+
+    chmod 666 /mnt/vendor/persist/audio/fsalgo_rdc.bin
+    chmod 666 /mnt/vendor/persist/audio/fsalgo_rdc.txt
 
 #service vendor.lowi /vendor/bin/sscrpcd
 #   class core

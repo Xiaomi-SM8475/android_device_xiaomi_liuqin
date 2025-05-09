@@ -74,6 +74,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
     (
+       'vendor/etc/audio/sku_cape/mixer_paths_overlay_static.xml',
+    ): blob_fixup()
+        .regex_replace('.+TL-handset.txt.+\n', ''),
+    (
        'vendor/etc/media_codecs.xml',
        'vendor/etc/media_codecs_cape.xml',
        'vendor/etc/media_codecs_cape_vendor.xml',

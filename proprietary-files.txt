@@ -1327,6 +1327,7 @@ vendor/bin/cnss-daemon;MODULE_SUFFIX=_liuqin;OVERRIDES=cnss-daemon
 vendor/bin/nv_mac
 
 # Wi-Fi (Configs)
+vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf

@@ -1,4 +1,4 @@
-# Device proprietary files - from Xiaomi Pad 6 Pro MIUI OS2.0.8.0.VMYCNXM package, unless pinned
+# Device proprietary files - from Xiaomi Pad 6 Pro MIUI OS2.0.212.0.VMYCNXM package, unless pinned
 
 # Adreno Firmware
 vendor/firmware/a730_sqe.fw
@@ -117,6 +117,7 @@ vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/lib64/hw/audio.primary.taro.so;MODULE_SUFFIX=_liuqin;OVERRIDES=audio.primary.taro
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/hw/sound_trigger.primary.taro.so
+vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so

@@ -54,6 +54,9 @@ subsystem mi_display
 # Xiaomi display feature
 /dev/mi_display/*         0666   root       graphics
 
+# Xiaomi ntag
+/dev/ntag5-nci            0660   nfc        nfc
+
 # Fingerprint
 /dev/goodix_fp                                                  0666  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* irq              0700  system system

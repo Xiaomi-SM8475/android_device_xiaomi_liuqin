@@ -112,6 +112,9 @@ on fs
     chmod 0666 /dev/xlog
 
 on post-fs
+    # add misight miev
+    chmod 0662 /dev/miev
+    restorecon /dev/miev
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
@@ -414,6 +417,10 @@ on property:sys.shutdown.requested=*
 #on property:vold.decrypt=trigger_restart_framework
 #   start vendor.cnss_diag
 
+on property:ro.debuggable=1
+    start vendor.cnss_diag
+    start vendor.tcpdump
+
 on property:persist.vendor.cnss_diag.enable=true
     start vendor.cnss_diag
 
@@ -461,6 +468,14 @@ service vendor.bt_wdsdaemon /system/vendor/bin/wdsdaemon -su
     group bluetooth diag system wakelock
     disabled
     oneshot
+
+#Enable WLAN SSR recovery
+on property:persist.vendor.ssr.restart_level=ALL_ENABLE
+    write /sys/kernel/cnss/recovery 1
+
+#Disable WLAN SSR recovery
+on property:persist.vendor.ssr.restart_level=ALL_DISABLE
+    write /sys/kernel/cnss/recovery 0
 
 #on property:sys.user.0.ce_available=true
 #    start vendor.tcpdump
@@ -620,11 +635,24 @@ on post-fs-data
     chmod 0662 /dev/miev
     restorecon /dev/miev
 
+service mi-serial-sh /vendor/bin/init.mi.serial.sh
+    class late_start
+    user root
+    group root system radio
+    disabled
+    oneshot
+
+on post-fs && property:ro.product.device=yudi
+    start mi-serial-sh
+
 on property:ro.product.device=yudi && property:ro.vendor.ril.oem.sno=*
     setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}
 
 on property:ro.product.device=yudi && property:ro.vendor.ril.oem.psno=*
     setprop ro.ril.oem.psno ${ro.vendor.ril.oem.psno}
+
+on post-fs && property:ro.product.device=liuqin
+    start mi-serial-sh
 
 on property:ro.product.device=liuqin && property:ro.vendor.ril.oem.sno=*
     setprop ro.ril.oem.sno ${ro.vendor.ril.oem.sno}
